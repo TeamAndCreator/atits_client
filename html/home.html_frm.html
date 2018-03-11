@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalabel=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>AUI快速完成布局</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style type="text/css">
+        .text-white {
+            color: #ffffff !important;
+        }
+        .text-light {
+            color: #999 !important;
+        }
+        .bg-white {
+            background-color: #ffffff;
+        }
+        .aui-grid [class*=aui-col-] {
+            padding: 0;
+        }
+        .user-info {
+            width: 150%;
+            position: relative;
+            left: -25%;
+            padding-left: 25%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            padding-bottom: 1.5rem;
+        }
+
+        .aui-grid .aui-dot {
+            top: 0rem;
+        }
+        .label-cont {
+            display: block;
+            height: 1.8rem;
+            line-height: 1.8rem;
+        }
+        .label-icon {
+            display: block;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            margin: 0 auto;
+            line-height: 1.8rem;
+            text-align: center;
+        }
+        .label-cont .aui-iconfont {
+            font-size: 1rem;
+        }
+        .label-icon .aui-iconfont {
+            color: #ffffff;
+            font-size: 0.8rem;
+        }
+        .font-size-26 {
+            font-size: 1.3rem !important;
+        }
+        .aui-grid-label {
+            color: #666 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部 -->
+    <section class="aui-content bg-white aui-margin-b-15">
+        <div class="aui-list aui-media-list aui-list-noborder aui-bg-info user-info">
+            <div class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner ">
+                    <div class="aui-list-item-media" style="width:3rem;">
+                        <img src="../image/demo1.png" class="aui-img-round" >
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text text-white aui-font-size-18">38dd4ef6d</div>
+                        <div class="aui-list-item-text text-white">
+                           <div><i class="aui-iconfont aui-icon-mobile aui-font-size-14"></i>152****0989</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-grid aui-margin-t-15 aui-margin-b-15">
+            <div class="aui-row">
+                <div class="aui-col-5">
+                    <i class="aui-iconfont aui-icon-home font-size-26"></i>
+                    <div class="aui-grid-label aui-font-size-12">待付款</div>
+                </div>
+                <div class="aui-col-5">
+                    <div class="aui-dot"></div>
+                    <i class="aui-iconfont aui-icon-refresh font-size-26"></i>
+                    <div class="aui-grid-label aui-font-size-12">待收货</div>
+                </div>
+                <div class="aui-col-5">
+                    <div class="aui-dot"></div>
+                    <i class="aui-iconfont aui-icon-comment font-size-26"></i>
+                    <div class="aui-grid-label aui-font-size-12">待评价</div>
+                </div>
+                <div class="aui-col-5">
+                    <i class="aui-iconfont aui-icon-back font-size-26"></i>
+                    <div class="aui-grid-label aui-font-size-12">退换/售后</div>
+                </div>
+                <div class="aui-col-5 aui-border-l">
+                    <i class="aui-iconfont aui-icon-calendar font-size-26 aui-text-danger"></i>
+                    <div class="aui-grid-label aui-font-size-12">我的订单</div>
+                </div>
+            </div>
+        </div>
+        <div class=" aui-grid aui-padded-b-15 aui-padded-t-15 aui-border-t">
+            <div class="aui-row">
+                <div class="aui-col-5">
+                    <big class="label-cont aui-font-size-16">88.88</big>
+                    <div class="aui-grid-label aui-font-size-12">余额</div>
+                </div>
+                <div class="aui-col-5">
+                    <big class="label-cont aui-font-size-16">1</big>
+                    <div class="aui-grid-label aui-font-size-12">优惠券</div>
+                </div>
+                <div class="aui-col-5">
+                    <big class="label-cont aui-font-size-16">88.88</big>
+                    <div class="aui-grid-label aui-font-size-12">提现</div>
+                </div>
+                <div class="aui-col-5">
+                    <big class="label-cont aui-font-size-16">666</big>
+                    <div class="aui-grid-label aui-font-size-12">积分</div>
+                </div>
+                <div class="aui-col-5 aui-border-l">
+                    <div class="label-icon"><i class="aui-iconfont aui-icon-cert font-size-26 aui-text-danger"></i></div>
+                    <div class="aui-grid-label aui-font-size-12">我的钱包</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aui-content bg-white aui-margin-b-15">
+        <div class=" aui-grid aui-padded-b-15 aui-padded-t-15">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    <big class="label-cont aui-font-size-16 aui-text-danger">23</big>
+                    <div class="aui-grid-label aui-font-size-12">商品关注</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <big class="label-cont aui-font-size-16 aui-text-danger">1</big>
+                    <div class="aui-grid-label aui-font-size-12">店铺关注</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <big class="label-cont aui-font-size-14 aui-text-danger">100</big>
+                    <div class="aui-grid-label aui-font-size-12">浏览记录</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <div class="label-icon aui-bg-danger"><i class=" aui-iconfont aui-icon-phone"></i></div>
+                    <div class="aui-grid-label aui-font-size-12">客户服务</div>
+                </div>
+            </div>
+        </div>
+        <div class=" aui-grid aui-padded-b-15 aui-padded-t-15 aui-border-t">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    <div class="label-icon aui-bg-info"><i class=" aui-iconfont aui-icon-cart"></i></div>
+                    <div class="aui-grid-label aui-font-size-12">购物车</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <div class="label-icon aui-bg-danger"><i class=" aui-iconfont aui-icon-flag"></i></div>
+                    <div class="aui-grid-label aui-font-size-12">我的活动</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <div class="label-icon aui-bg-warning"><i class=" aui-iconfont aui-icon-home"></i></div>
+                    <div class="aui-grid-label aui-font-size-12">服装城</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <div class="label-icon aui-bg-success"><i class=" aui-iconfont aui-icon-map"></i></div>
+                    <div class="aui-grid-label aui-font-size-12">周边附近</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aui-content">
+        <div class="aui-card-list">
+            <div class="aui-card-list-header">
+                <div class="aui-font-size-14">问答动态</div>
+                <i class="aui-iconfont aui-icon-close"></i>
+            </div>
+            <div class="aui-card-list-content">
+                <ul class="aui-list aui-media-list">
+                    <li class="aui-list-item">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media aui-padded-r-10" style="width: 1.5rem;">
+                                <img src="../image/demo5.png" class="aui-img-round" >
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-12 text-light">有人向您提问</div>
+                                </div>
+                                <div class="aui-list-item-text aui-font-size-14" style="color:#333;padding-top: 0.4rem;">
+                                    手机屏幕发黄，特别黄，怎么回事
+                                </div>
+                                <div class="aui-list-item-text aui-font-size-12 text-light">
+                                    共9条回答
+                                </div>
+                            </div>
+                            <div class="aui-list-item-media aui-padded-r-10" style="width: 4rem;">
+                                <img src="http://img10.360buyimg.com/n1/s450x450_jfs/t4276/257/2416766721/125228/ba72a107/58d1d078N20e18b62.jpg" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media aui-padded-r-10" style="width: 1.5rem;">
+                                <img src="../image/demo5.png" class="aui-img-round" >
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-12 text-light">有人向您提问</div>
+                                </div>
+                                <div class="aui-list-item-text aui-font-size-14" style="color:#333;padding-top: 0.4rem;">
+                                    大家对中国红有什么看法呢
+                                </div>
+                                <div class="aui-list-item-text aui-font-size-12 text-light">
+                                    共9条回答
+                                </div>
+                            </div>
+                            <div class="aui-list-item-media aui-padded-r-10" style="width: 4rem;">
+                                <img src="http://img10.360buyimg.com/n1/s450x450_jfs/t4276/257/2416766721/125228/ba72a107/58d1d078N20e18b62.jpg" />
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="aui-card-list-footer aui-text-center">
+                查看更多
+            </div>
+        </div>
+    </section>
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+    apiready = function () {
+    }
+</script>
+</html>
