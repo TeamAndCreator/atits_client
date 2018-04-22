@@ -1,0 +1,94 @@
+
+.logo {
+     margin-left : 100px ;
+     margin-top : 40px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.aui {
+    margin-left: 25px ;
+    margin-top : 20px;
+}
+input {
+    outline: none;
+    font-weight : lighter;
+    font-size : 15px;
+}
+select{
+appearance:none;
+-moz-appearance:none;
+-webkit-appearance:none;
+padding-right: 14px;
+background: #fff;
+}
+select::-ms-expand {
+  display: none;
+}
+.menu:after{
+            content: "";
+            width :20px;
+            height : 20px;
+            background: url(../image/pic2.png) no-repeat center;
+            background-size:20px;
+            margin-top: 15px;
+            margin-right: 10px;
+            position: absolute;
+            right: 0px;
+            top: 0%;
+            pointer-events: none;
+        }
+.aui-list-item{
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 48px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow : hidden;
+}
+
+.aui-list-item-input {
+    margin-left: 15px;
+    font-weight: lighter;
+    color: #ccc;
+    font-size: 15px;
+    margin-top: 15px;
+    float: left;
+}
+
+.aui-list-item-label-icon {
+    margin-top: 15px;
+    margin-right: 10px;
+    float: right;
+}
+
+.aui-list-item-label-icon img {
+    width: 20px;
+}
+
+.tip a {
+    float : right;
+    margin-right : 22px;
+    color: #ccc;
+    font-weight: lighter;
+}
+
+.join {
+    margin-top: 55px;
+    background-color: rgb(98, 184, 25);
+    border-radius: 8px;
+    width: 310px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+}
+
+.aui .join a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration : none;
+}
