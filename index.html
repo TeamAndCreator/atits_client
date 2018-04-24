@@ -8,8 +8,8 @@
     <link rel="stylesheet" type="text/css" href="./css/api.css"/>
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
     <style>
-        header{ background-color: #f2f2f2; }
-        header ul li { height: 50px; line-height: 50px; text-align: center; display: none; color: #323237; position: relative;font-size: 18px;  }
+        header{ background-color: rgb(98, 184, 25); }
+        header ul li { height: 50px; line-height: 50px; text-align: center; display: none; color: #fff; position: relative;font-size: 18px;  }
         header ul li.active{ display: block; }
         #footer{  background-color: #f2f2f2; }
         #footer ul li{  padding-top: 36px; padding-bottom: 4px; background: url() no-repeat center 2px; background-size: auto 30px; text-align: center; }
@@ -28,25 +28,25 @@
     </style>
 </head>
 <body>
-  <h1>header</h1>
+
 <div id="wrap" class="flex-wrap flex-vertical">
-    <header>
-        <ul>
-            <li class="border-b active" >云API</li>
-            <li class="border-b" >端API</li>
-            <li class="border-b" >开发</li>
-            <li class="border-b" >文档</li>
-        </ul>
-    </header>
+  <header >
+      <ul>
+          <li class="border-b active" >安徽省现代农业产业技术体系平台</li>
+          <li class="border-b" >资讯</li>
+          <li class="border-b" >我的</li>
+
+      </ul>
+  </header>
     <div id="main" class="flex-con">
 
     </div>
     <div id="footer" class="border-t">
         <ul class="flex-wrap" >
-            <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con active" >云API</li>
-            <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con" >端API</li>
-            <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con" >开发</li>
-            <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con" >文档</li>
+            <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con active" >首页</li>
+              <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con" >资讯</li>
+            <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con" >我的</li>
+
         </ul>
     </div>
 </div>
@@ -58,7 +58,7 @@
         $api.fixStatusBar( $api.dom('header') );
         api.setStatusBarStyle({
             style: 'dark',
-            color: '#6ab494'
+            color: 'rgb(98, 184, 25)'
         });
         funIniGroup();
     }

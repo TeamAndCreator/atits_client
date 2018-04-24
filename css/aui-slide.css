@@ -13,7 +13,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 230px;
     width: 100%;
     overflow: hidden;
 }
@@ -46,7 +46,7 @@
     box-align: center;
 }
 .aui-slide-node img {
-    width: 100%;
+    width:100%;
     height: 100%;
 }
 .aui-slide-page-wrap {
