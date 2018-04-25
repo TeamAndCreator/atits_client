@@ -76,7 +76,7 @@ select::-ms-expand {
     font-weight: lighter;
 }
 
-.join {
+.register {
     margin-top: 55px;
     background-color: rgb(98, 184, 25);
     border-radius: 8px;
@@ -87,7 +87,7 @@ select::-ms-expand {
     font-size: 18px;
 }
 
-.aui .join a {
+.aui .register a {
     font-size: 20px;
     color: #fff;
     text-decoration : none;

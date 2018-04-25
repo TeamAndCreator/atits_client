@@ -53,6 +53,7 @@
 </body>
 </html>
 <script type="text/javascript" src="script/api.js"></script>
+
 <script type="text/javascript">
     apiready = function () {
         $api.fixStatusBar( $api.dom('header') );
@@ -60,6 +61,7 @@
             style: 'dark',
             color: 'rgb(98, 184, 25)'
         });
+        is_login(); //这是每次打开index时判断的
         funIniGroup();
     }
 
@@ -112,3 +114,4 @@
         });
     }
 </script>
+<script type="text/javascript" src="script/index.js"></script>

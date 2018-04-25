@@ -5,7 +5,7 @@ apiready = function() {
 $(".login").on("click", function() {
 
     $.ajax({
-        url: 'http://47.104.26.79:8080/atits_app/login/login ',
+        url: 'http://47.104.26.79:8080/atits_service/login/login ',
         type: 'post',
         data: $("#login_form").serialize(),
         dataType: 'json',
@@ -13,7 +13,7 @@ $(".login").on("click", function() {
                 if (result.code == 100) {
                     api.openWin({
                         name: 'index',
-                        url: '/index.html',
+                        url: '../index.html',
                         pageParam: {
                             name: 'test'
                         }
