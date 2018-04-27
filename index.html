@@ -53,7 +53,7 @@
 </body>
 </html>
 <script type="text/javascript" src="script/api.js"></script>
-
+<script type="text/javascript" src="script/index.js"></script>
 <script type="text/javascript">
     apiready = function () {
         $api.fixStatusBar( $api.dom('header') );
@@ -63,6 +63,8 @@
         });
         is_login(); //这是每次打开index时判断的
         funIniGroup();
+        
+        keybackEventListener();
     }
 
     function funIniGroup(){
@@ -114,4 +116,3 @@
         });
     }
 </script>
-<script type="text/javascript" src="script/index.js"></script>
