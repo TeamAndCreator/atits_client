@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+        .logo {
+            margin-left: 100px;
+            margin-top: 40px;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .aui {
+            margin-left: 25px;
+            margin-top: 20px;
+        }
+
+        input {
+            outline: none;
+            font-weight: lighter;
+            font-size: 15px;
+        }
+
+        .aui-list-item {
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 48px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .aui-list-item-input {
+            margin-left: 15px;
+            font-weight: lighter;
+            color: #ccc;
+            font-size: 15px;
+            margin-top: 15px;
+            float: left;
+        }
+
+        .aui-list-item-label-icon {
+            margin-top: 15px;
+            margin-right: 10px;
+            float: right;
+        }
+
+        .aui-list-item-label-icon img {
+            width: 20px;
+        }
+
+        .tip a {
+            float: right;
+            margin-right: 22px;
+            color: #ccc;
+            font-weight: lighter;
+        }
+
+        .login {
+            margin-top: 55px;
+            background-color: rgb(98, 184, 25);
+            border-radius: 8px;
+            width: 310px;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            font-size: 18px;
+        }
+
+        .login a {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #ccc;
+        }
+
+        .footer a {
+            color: #ccc;
+            font-size: 15px;
+            font-weight: lighter;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="../image/pic1.png">
+    </div>
+    <div class="aui">
+        <form id="login_form">
+            <ul class="aui-list aui-form-list">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+
+                        <div class="aui-list-item-input">
+                            <input type="text" name="userName" placeholder="用户名">
+                        </div>
+                        <div class="aui-list-item-label-icon">
+                            <a href="#">
+                                <img src="../image/pic3.png">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+
+                        <div class="aui-list-item-input">
+                            <input type="password" name="password" placeholder="密码">
+                        </div>
+                        <div class="aui-list-item-label-icon">
+                            <a href="#">
+                                <img src="../image/pic4.png">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        <div class="tip">
+            <a href="#">首次登陆提示</a>
+        </div>
+        <button class="login">
+            登陆
+        </button>
+        <div class="footer">
+            <a href="register.html">立即注册</a> | <a href="#">忘记密码</a>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/jquery.min.js"></script>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/login.js"></script>
+
+
+</html>
