@@ -32,56 +32,71 @@
 <body>
     <ul class="nav">
         <li>
-            <a href="#" target="_blank">
-                <p class="wz-l">安徽农业大学校庆什么时候</p>
-                <span class="wz-r">2018-03-28</span>
-            </a>
+          <a href="">
+            <p class="wz-l">安徽农业大学校庆什么时候</p>
+            <span class="wz-r">2018-03-28</span>
+          </a>
         </li>
         <li>
-            <a href="#" target="_blank">
-                <p class="wz-l">安徽农业大学</p>
-                <span class="wz-r">2018-03-23</span>
-            </a>
+          <a href="">
+            <p class="wz-l">安徽农业大学</p>
+            <span class="wz-r">2018-03-23</span>
+              </a>
         </li>
         <li>
-            <a href="#" target="_blank">
-                <p class="wz-l">关于抓紧做好2017年工作总结、绩效考评和蓝皮书编制工作的通知</p>
-                <span class="wz-r">2018-01-05</span>
-            </a>
+
+          <a href="notice_frame1.html">
+            <p class="wz-l">关于抓紧做好2017年工作总结、绩效考评和蓝皮书编制工作的通知</p>
+            <span class="wz-r">2018-01-05</span>
+          </a>
         </li>
         <li>
-            <a href="#" target="_blank">
-                <p class="wz-l">体系工作情况通报（六）</p>
-                <span class="wz-r">2018-01-05</span>
-            </a>
+          <a href="">
+            <p class="wz-l">体系工作情况通报（六）</p>
+            <span class="wz-r">2018-01-05</span>
+              </a>
         </li>
         <li>
-            <a href="#" target="_blank">
-                <p class="wz-l">体系工作情况通报（五）</p>
-                <span class="wz-r">2018-01-05</span>
-            </a>
+          <a href="">
+            <p class="wz-l">体系工作情况通报（五）</p>
+            <span class="wz-r">2018-01-05</span>
+              </a>
         </li>
         <li>
-            <a href="#" target="_blank">
-                <p class="wz-l">体系工作情况通报（四）</p>
-                <span class="wz-r">2018-01-05</span>
-            </a>
+          <a href="">
+            <p class="wz-l">体系工作情况通报（四）</p>
+            <span class="wz-r">2018-01-05</span>
+              </a>
         </li>
         <li>
-            <a href="#" target="_blank">
-                <p class="wz-l">体系工作情况通报（三）</p>
-                <span class="wz-r">2018-01-05</span>
-            </a>
+          <a href="">
+            <p class="wz-l">体系工作情况通报（三）</p>
+            <span class="wz-r">2018-01-05</span>
+              </a>
         </li>
         <li>
-            <a href="#" target="_blank">
-                <p class="wz-l">体系工作情况通报（二）</p>
-                <span class="wz-r">2018-01-05</span>
-            </a>
+          <a href="">
+            <p class="wz-l">体系工作情况通报（二）</p>
+            <span class="wz-r">2018-01-05</span>
+              </a>
         </li>
 
 
     </ul>
 </body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    //打开一个新窗口先打开他的win窗口，再到frame
+    function fnOpenNoticeWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'notice',
+            url: './notice1.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+</script>
 
 </html>

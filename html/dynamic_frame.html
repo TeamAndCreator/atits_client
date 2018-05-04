@@ -29,43 +29,111 @@
 </head>
 <body>
   <ul>
-    <li>
-        <a href="#" target="_blank">
+    <li tapmode onclick="fnOpenDynamicWin();">
+
             <p class="wz-l">省蔬菜体系持续发力 聚焦暴雪过后加强蔬菜田间管理措施</p>
             <p class="wz-r">2018-01-17</p>
-        </a>
+
     </li>
-    <li>
-        <a href="#" target="_blank">
+    <li tapmode onclick="fnOpenDynamicWin();">
+
             <p class="wz-l">省果树体系紧急发布果园雪灾防范及灾后管理技术措施</p>
             <p class="wz-r">2018-01-17</p>
-        </a>
+
     </li>
-    <li>
-        <a href="#" target="_blank">
+    <li tapmode onclick="fnOpenDynamicWin();">
+
             <p class="wz-l">省油菜棉花体系紧急发布油菜雪后抗冻减灾技术措施</p>
             <p class="wz-r">2018-01-17</p>
-        </a>
+
     </li>
-    <li>
-        <a href="#" target="_blank">
+    <li tapmode onclick="fnOpenDynamicWin();">
+
             <p class="wz-l">省生猪体系紧急发布养猪业应对低温雨雪天气技术措施</p>
             <p class="wz-r">2018-01-17</p>
-        </a>
+
     </li>
-    <li>
-        <a href="#" target="_blank">
+    <li tapmode onclick="fnOpenDynamicWin();">
+
             <p class="wz-l">省家禽体系紧急发布家禽应对暴雪严寒天气应对技术措施</p>
             <p class="wz-r">2018-01-17</p>
-        </a>
+
     </li>
-    <li>
-        <a href="#" target="_blank">
+    <li tapmode onclick="fnOpenDynamicWin();">
+
             <p class="wz-l">省蔬菜体系紧急发布蔬菜防寒防雪防灾技术措施</p>
             <p class="wz-r">2018-01-17</p>
-        </a>
+
     </li>
 </ul>
 </body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    //打开一个新窗口先打开他的win窗口，再到frame
+    function fnOpenDynamicWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'dynamic',
+            url: './dynamic_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
 
+    function fnOpenActivityWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'activity',
+            url: './activity_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenReportWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'report',
+            url: './report_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenRegulationWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'regulation',
+            url: './regulation_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenHarvestWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'harvest',
+            url: './harvest_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenNoticeWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'notice',
+            url: './notice_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+</script>
 </html>
