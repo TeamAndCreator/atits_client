@@ -1,5 +1,5 @@
 apiready = function(){
-
+  keybackEventListener();
 }
 
 $(".register").on("click", function() {
