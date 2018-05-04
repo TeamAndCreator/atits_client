@@ -1,17 +1,200 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
-    <title>端API</title>
-    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <title>资讯</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-flex.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
     <style>
-        .empty{ text-align: center; padding: 120px 0; }
+        nav {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-flex-flow: row;
+            flex-flow: row;
+            position: relative;
+            width: 100%;
+            height: 45px;
+            background-color: #ccc;
+        }
+
+        nav .menu {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            font-size: 14px;
+            color: rgb(98, 184, 25);
+            text-align: center;
+        }
+
+        nav .menu.selected {
+            font-size: 14px;
+            color: #fff;
+            background-color: rgb(98, 184, 25);
+            font-weight: bolder;
+        }
+    </style>
     </style>
 </head>
+
 <body>
-    <div class="empty">端API</div>
+
+    <!-- <nav class="aui-tab">
+        <div class="menu selected" tapmode="selected" onclick="fnSetNavMenuIndex(0);">体系动态</div>
+        <div class="menu" tapmode="selected" onclick="fnSetNavMenuIndex(1);">通知公告</div>
+        <div class="menu" tapmode="selected" onclick="fnSetNavMenuIndex(2);">规章制度</div>
+        <div class="menu" tapmode="selected" onclick="fnSetNavMenuIndex(3);">重大活动</div>
+        <div class="menu" tapmode="selected" onclick="fnSetNavMenuIndex(4);">重大成果</div>
+    </nav> -->
+    <section class="aui-content" style="background-color: #fff;margin-top:10px;">
+        <div class="aui-flex-col aui-flex-center aui-border-tb">
+
+            <div class="aui-flex-item-6 aui-border-l">
+              <!-- <div class="aui-flex-col aui-padded-10 aui-border-b">
+                  <div class="aui-flex-item-12">
+
+                  </div>
+              </div> -->
+                <div class="aui-flex-col aui-padded-10 aui-border-b" tapmode onclick="fnOpenDynamicWin();">
+                  <!-- 打开窗口的点击事件 -->
+                    <div class="aui-flex-item-12">
+                        <div class="aui-flex-item-9">
+                            <h2 class="aui-text-info">体系动态</h2>
+                            <p>System dynamics</p>
+                        </div>
+                        <div class="aui-flex-item-3 aui-text-right"><img src=""></div>
+                    </div>
+                </div>
+                <div class="aui-flex-col aui-padded-10 aui-border-b" tapmode onclick="fnOpenRegulationWin();">
+                    <div class="aui-flex-item-12">
+                        <div class="aui-flex-item-9">
+                            <h2 class="aui-text-success">规章制度</h2>
+                            <p>Regulations</p>
+                        </div>
+                        <div class="aui-flex-item-3 aui-text-right"><img src=""></div>
+                    </div>
+                </div>
+                <div class="aui-flex-col aui-padded-10 aui-border-b" tapmode onclick="fnOpenActivityWin();">
+                    <div class="aui-flex-item-12">
+                        <div class="aui-flex-item-9">
+                            <h2 class="aui-text-danger">重大活动</h2>
+                            <p>Activities</p>
+                        </div>
+                        <div class="aui-flex-item-3 aui-text-right"><img src=""></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="aui-flex-item-6 aui-border-l">
+                <div class="aui-flex-col aui-padded-10 aui-border-b" tapmode onclick="fnOpenNoticeWin();">
+                    <div class="aui-flex-item-12">
+                        <div class="aui-flex-item-9">
+                            <h2 class="aui-text-info">通知公告</h2>
+                            <p>Notice bulletin</p>
+                        </div>
+                        <div class="aui-flex-item-3 aui-text-right"><img src=""></div>
+                    </div>
+                </div>
+                <div class="aui-flex-col aui-padded-10 aui-border-b" tapmode onclick="fnOpenReportWin();">
+                    <div class="aui-flex-item-12">
+                        <div class="aui-flex-item-9">
+                            <h2 class="aui-text-success">重大文件报告</h2>
+                            <p>Documents</p>
+                        </div>
+                        <div class="aui-flex-item-3 aui-text-right"><img src=""></div>
+                    </div>
+                </div>
+                <div class="aui-flex-col aui-padded-10 aui-border-b" tapmode onclick="fnOpenHarvestWin();">
+                    <div class="aui-flex-item-12">
+                        <div class="aui-flex-item-9">
+                            <h2 class="aui-text-danger">重大成果</h2>
+                            <p>Achievements</p>
+                        </div>
+<div class="aui-flex-item-3 aui-text-right"><img src=""></div>
+</div>
+</div>
+</div>
+</div>
+</section>
 </body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    //打开一个新窗口先打开他的win窗口，再到frame
+    function fnOpenDynamicWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'dynamic',
+            url: './dynamic_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenActivityWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'activity',
+            url: './activity_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenReportWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'report',
+            url: './report_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenRegulationWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'regulation',
+            url: './regulation_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenHarvestWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'harvest',
+            url: './harvest_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenNoticeWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'notice',
+            url: './notice_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+</script>
+
+
 </html>
