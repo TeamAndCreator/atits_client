@@ -57,4 +57,4 @@ function is_login() { //这是判断是否登陆的
     }
 }
 
-// $api.clearStorage(); //清空Storage缓存数据
+//  //清空Storage缓存数据
