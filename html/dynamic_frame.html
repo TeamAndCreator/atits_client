@@ -1,73 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title>开发</title>
-    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
-  <link rel="stylesheet" type="text/css" href="../css/style.css" />
-<style>
-    ul li a{
-        font-size: 15px;
-        padding: 8px 15px;
-        width: 100%;
-        height: 50px;
-        border-bottom: dotted 1px #ccc;
-    }
-    .wz-l{
-        overflow : hidden;
-        text-overflow : ellipsis;
-        white-space : nowrap;
-        width : 90%;
-    }
-    ul li a p,
-    ul li a span {
-        color: #424242;
-    }
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <style>
+        ul li a {
+            font-size: 15px;
+            padding: 8px 15px;
+            width: 100%;
+            height: 50px;
+            border-bottom: dotted 1px #ccc;
+        }
 
-</style>
+        .wz-l {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 90%;
+        }
+
+        ul li a p,
+        ul li a span {
+            color: #424242;
+        }
+    </style>
 </head>
-<body>
-  <ul>
-    <li tapmode onclick="fnOpenDynamicWin();">
-         <a href="">
-            <p class="wz-l">省蔬菜体系持续发力 聚焦暴雪过后加强蔬菜田间管理措施</p>
-            <p class="wz-r">2018-01-17</p>
-         </a>
-    </li>
-    <li tapmode onclick="fnOpenDynamicWin();">
-        <a href="">
-            <p class="wz-l">省果树体系紧急发布果园雪灾防范及灾后管理技术措施</p>
-            <p class="wz-r">2018-01-17</p>
-        </a>
-    </li>
-    <li tapmode onclick="fnOpenDynamicWin();">
-          <a href="">
-            <p class="wz-l">省油菜棉花体系紧急发布油菜雪后抗冻减灾技术措施</p>
-            <p class="wz-r">2018-01-17</p>
-          </a>
-    </li>
-    <li tapmode onclick="fnOpenDynamicWin();">
-         <a href="">
-            <p class="wz-l">省生猪体系紧急发布养猪业应对低温雨雪天气技术措施</p>
-            <p class="wz-r">2018-01-17</p>
-          </a>
-    </li>
-    <li tapmode onclick="fnOpenDynamicWin();">
-         <a href="">
-            <p class="wz-l">省家禽体系紧急发布家禽应对暴雪严寒天气应对技术措施</p>
-            <p class="wz-r">2018-01-17</p>
-        </a>
-    </li>
-    <li tapmode onclick="fnOpenDynamicWin();">
-          <a href="">
-            <p class="wz-l">省蔬菜体系紧急发布蔬菜防寒防雪防灾技术措施</p>
-            <p class="wz-r">2018-01-17</p>
-          </a>
-    </li>
-</ul>
-</body>
-<script type="text/javascript" src="../script/api.js"></script>
 
+<body>
+    <ul id="dynamic">
+
+
+    </ul>
+</body>
+<script type="text/javascript" src="../script/jquery.min.js"></script>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/url.js"></script>
+<script type="text/javascript" src="../script/dynamic.js"></script>
 </html>
