@@ -7,7 +7,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../css/api.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
-      <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
     <style>
     .con {
         width: 100%;
@@ -66,36 +66,36 @@
       </div>
   </div>
   <div class="con">
-      <div class="con-1">
-          <a href="#">
+      <div class="con-1"  tapmode onclick="fnOpenSystemWin();">
+          <a>
               <img src="../image/swipe/around.png" />
               <strong>体系综述</strong>
               <span>SYSTEM REVIEW</span>
           </a>
       </div>
-      <div class="con-1">
-          <a href="#">
+      <div class="con-1"  tapmode onclick="fnOpenLeaderWin();">
+          <a>
               <img src="../image/swipe/sport.png">
               <strong style="">现任领导</strong>
               <span style="">THE PRESENT LEADER</span>
           </a>
       </div>
-      <div class="con-1">
-          <a href="#">
+      <div class="con-1"  tapmode onclick="fnOpenLaboratoryWin();">
+          <a>
               <img src="../image/swipe/rank.png">
               <strong style="">功能研究室</strong>
               <span style="">LABORATORY</span>
           </a>
       </div>
-      <div class="con-1">
-          <a href="#">
+      <div class="con-1"  tapmode onclick="fnOpenStationWin();">
+          <a >
               <img src="../image/swipe/house.png">
               <strong style="">综合试验站</strong>
               <span style="">TEST STATION</span>
           </a>
       </div>
-      <div class="con-1">
-          <a href="#">
+      <div class="con-1"  tapmode onclick="fnOpenManagamentWin();">
+          <a>
               <img src="../image/swipe/decorate.png">
               <strong style="">体系管理</strong>
               <span style="">SYSTEM MANAGAMENT</span>
@@ -122,6 +122,64 @@
     function currentFun(index) {
         console.log(index);
     }
+
+    //打开一个新窗口先打开他的win窗口，再到frame
+    function fnOpenSystemWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'system',
+            url: './system_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenLeaderWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'leader',
+            url: './leader_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenLaboratoryWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'laboratory',
+            url: './laboratory_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenStationWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'station',
+            url: './station_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+    function fnOpenManagamentWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'managament',
+            url: './managament_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+
+
 </script>
 
 </html>
