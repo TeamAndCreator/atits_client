@@ -3,9 +3,9 @@ apiready = function() {
 }
 
 $(".login").on("click", function() {
-
+    urlParam = param +'/login/login';
     $.ajax({
-        url: 'http://47.104.26.79:8080/atits_service/login/login ',
+        url: urlParam,
         type: 'post',
         data: $("#login_form").serialize(),
         dataType: 'json',
