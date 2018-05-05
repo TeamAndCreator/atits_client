@@ -4,8 +4,9 @@ apiready = function(){
 
 $(".register").on("click", function() {
     // alert($("#register_form").serialize());
+    urlParam = param +'/register';
     $.ajax({
-        url: 'http://47.104.26.79:8080/atits_service/register ',
+        url: urlParam,
         type: 'post',
         data: $("#register_form").serialize(),
         dataType: 'json',

@@ -4,8 +4,9 @@ apiready = function() {
 
 $(".logout").on("click", function() {
     // alert("123");
+    urlParam = param +'/login/logout';
     $.ajax({
-        url: 'http://47.104.26.79:8080/atits_service/login/logout ',
+        url: urlParam,
         type: 'get',
         dataType: 'json',
         success: function(result) {
