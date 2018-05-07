@@ -38,6 +38,17 @@
 
 
 </body>
+<script type="text/javascript">
+function fnOpenLeaderFirstWin() {
+    //alert($api.jsonToStr(userInfo));
+    api.openWin({
+        name: 'leader1',
+        url: './leader_win1.html',
+        pageParam: {
+            name: 'test'
+        }
+    });
+}
 </script>
 <script type="text/javascript" src="../script/jquery.min.js"></script>
 <script type="text/javascript" src="../script/api.js"></script>

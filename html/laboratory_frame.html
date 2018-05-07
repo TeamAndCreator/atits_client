@@ -34,7 +34,7 @@
 <body>
   <ul class="nav">
       <li>
-        <a href="laboratory_frame1.html">
+        <a tapmode onclick="fnOpenLaboratoryFirstWin();">
           <p class="wz-l">专用水稻产业化技术研究室</p>
         </a>
       </li>
@@ -88,6 +88,17 @@
   </ul>
 
 </body>
+<script type="text/javascript">
+function fnOpenLaboratoryFirstWin() {
+    //alert($api.jsonToStr(userInfo));
+    api.openWin({
+        name: 'laboratory1',
+        url: './laboratory_win1.html',
+        pageParam: {
+            name: 'test'
+        }
+    });
+}
 </script>
 
 </html>
