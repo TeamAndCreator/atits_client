@@ -34,7 +34,7 @@
 <body>
   <ul class="nav">
       <li>
-        <a href="leader_frame1.html">
+        <a tapmode onclick="fnOpenLeaderFirstWin();">
           <p class="wz-l">水稻产业技术体系</p>
         </a>
       </li>
@@ -113,6 +113,17 @@
 
 
 </body>
+<script type="text/javascript">
+function fnOpenLeaderFirstWin() {
+    //alert($api.jsonToStr(userInfo));
+    api.openWin({
+        name: 'leader1',
+        url: './leader_win1.html',
+        pageParam: {
+            name: 'test'
+        }
+    });
+}
 </script>
 
 </html>

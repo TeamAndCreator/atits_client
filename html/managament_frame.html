@@ -39,7 +39,7 @@
         </a>
       </li>
       <li>
-        <a href="managament_frame1.html">
+        <a tapmode onclick="fnOpenManagamentFirstWin();">
           <p class="wz-l">  	水稻产业技术体系</p>
         </a>
       </li>
@@ -69,6 +69,17 @@
   </ul>
 
 </body>
+<script type="text/javascript">
+function fnOpenManagamentFirstWin() {
+    //alert($api.jsonToStr(userInfo));
+    api.openWin({
+        name: 'managament1',
+        url: './managament_win1.html',
+        pageParam: {
+            name: 'test'
+        }
+    });
+}
 </script>
 
 </html>
