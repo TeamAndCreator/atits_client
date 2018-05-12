@@ -94,7 +94,7 @@
               <span style="">TEST STATION</span>
           </a>
       </div>
-      <div class="con-1"  tapmode onclick="fnOpenManagamentWin();">
+      <div class="con-1"  tapmode onclick="fnOpenManagementWin();">
           <a>
               <img src="../image/swipe/decorate.png">
               <strong style="">体系管理</strong>
@@ -168,11 +168,11 @@
         });
     }
 
-    function fnOpenManagamentWin() {
+    function fnOpenManagementWin() {
         //alert($api.jsonToStr(userInfo));
         api.openWin({
-            name: 'managament',
-            url: './managament_win.html',
+            name: 'management',
+            url: './management_win.html',
             pageParam: {
                 name: 'test'
             }
