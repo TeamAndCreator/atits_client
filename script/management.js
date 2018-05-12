@@ -11,17 +11,17 @@ apiready = function() {
             var systems = result.data.systems;
 
             $.each(systems, function(index, system) {
-                var liEle = '<li><a tapmode onclick="fnOpenLeaderDetail(' + system.id + ')";><p class="wz-l">' + system.systemName + '</p></a></li>';
+                var liEle = '<li><a tapmode onclick="fnOpenManagementDetail(' + system.id + ')";><p class="wz-l">' + system.systemName + '</p></a></li>';
                 $(liEle).appendTo("ul");
             });
         }
     });
 }
 
-function fnOpenLeaderDetail(system_id){
+function fnOpenManagementDetail(system_id){
   api.openWin({
-      name: 'leader_win1',
-      url: './leader_win1.html',
+      name: 'management_win1',
+      url: './management_win1.html',
       pageParam: {
         id:system_id
       }

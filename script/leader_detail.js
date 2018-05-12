@@ -24,7 +24,7 @@ apiready = function() {
                 Ele += systemuser.station_master[i]+'&nbsp;&nbsp';
             }
             Ele += '</h4></div></div>'
-            
+
             $(Ele).appendTo("div");
 
         }
