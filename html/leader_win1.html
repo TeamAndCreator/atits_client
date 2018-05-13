@@ -22,15 +22,21 @@
         $api.fixStatusBar(header);
         var headerPos = $api.offset(header);
         var body_h = $api.offset($api.dom('body')).h;
+
+        var system_id = api.pageParam.id;
+
         api.openFrame({
             name: 'leader1',
-            url: './leader_frame1.html',
+            url: './leader_detail.html',
             bounces: true,
             rect: {
                 x: 0,
                 y: headerPos.h,
                 w: 'auto',
                 h: 'auto'
+            },
+            pageParam:{
+              id:system_id
             }
         })
     };
