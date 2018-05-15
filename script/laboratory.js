@@ -1,6 +1,6 @@
 apiready = function() {
 
-    urlParam = param + '/system/findAll1';
+    urlParam = param + '/laboratory/findAll';
 
     $.ajax({
         url: urlParam,
@@ -8,22 +8,22 @@ apiready = function() {
         dataType: 'json',
         success: function(result) {
             // console.log(JSON.stringify(result));
-            var systems = result.data.systems;
+            var laboratory = result.data.Laboratory;
 
-            $.each(systems, function(index, system) {
-                var liEle = '<li><a tapmode onclick="fnOpenLaboratoryDetail(' + system.id + ')";><p class="wz-l">' + system.systemName + '</p></a></li>';
+            $.each(laboratory, function(index, laboratory) {
+                var liEle = '<li><a tapmode onclick="fnOpenLaboratoryDetail(' + laboratory.id + ')";><p class="wz-l">' + laboratory.labName + '</p><span>('+laboratory.system.systemName+')</span></a></li>';
                 $(liEle).appendTo("ul");
             });
         }
     });
 }
 
-function fnOpenLaboratoryDetail(system_id){
+function fnOpenLaboratoryDetail(laboratory_id){
   api.openWin({
-      name: 'laboratory_detail',
-      url: './laboratory_detail.html',
+      name: 'laboratory_win1',
+      url: './laboratory_win1.html',
       pageParam: {
-        id:system_id
+        id:laboratory_id
       }
   });
 }

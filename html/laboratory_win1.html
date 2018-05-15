@@ -22,15 +22,21 @@
         $api.fixStatusBar(header);
         var headerPos = $api.offset(header);
         var body_h = $api.offset($api.dom('body')).h;
+
+        var laboratory_id = api.pageParam.id;
+
         api.openFrame({
             name: 'laboratory',
-            url: './laboratory_frame1.html',
+            url: './laboratory_detail.html',
             bounces: true,
             rect: {
                 x: 0,
                 y: headerPos.h,
                 w: 'auto',
                 h: 'auto'
+            },
+            pageParam:{
+              id:laboratory_id
             }
         })
     };
