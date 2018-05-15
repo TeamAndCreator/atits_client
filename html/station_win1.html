@@ -22,15 +22,21 @@
         $api.fixStatusBar(header);
         var headerPos = $api.offset(header);
         var body_h = $api.offset($api.dom('body')).h;
+
+        var station_id = api.pageParam.id;
+
         api.openFrame({
-            name: 'station1',
-            url: './station_frame1.html',
+            name: 'station_detail',
+            url: './station_detail.html',
             bounces: true,
             rect: {
                 x: 0,
                 y: headerPos.h,
                 w: 'auto',
                 h: 'auto'
+            },
+            pageParam:{
+              id:station_id
             }
         })
     };
@@ -39,4 +45,5 @@
         });
     }
 </script>
+
 </html>
