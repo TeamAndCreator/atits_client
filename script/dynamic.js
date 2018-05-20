@@ -21,7 +21,7 @@ apiready = function() {
 function fnOpenDynamicDetail(dynamic_id){
   api.openWin({
       name: 'dynamic_detail',
-      url: './dynamic_detail.html',
+      url: './dynamic_detail_win.html',
       pageParam: {
         name:'test',
         id:dynamic_id
