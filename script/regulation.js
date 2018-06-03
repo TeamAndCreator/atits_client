@@ -19,7 +19,7 @@ apiready = function() {
 function fnOpenRegulationDetail(regulation_id){
   api.openWin({
       name: 'regulation_detail',
-      url: './regulation_detail.html',
+      url: './regulation_detail_win.html',
       pageParam: {
         id:regulation_id
       }

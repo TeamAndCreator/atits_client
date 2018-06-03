@@ -19,7 +19,7 @@ apiready = function() {
 function fnOpenHarvestDetail(harvest_id){
   api.openWin({
       name: 'harvest_detail',
-      url: './harvest_detail.html',
+      url: './harvest_detail_win.html',
       pageParam: {
         id:harvest_id
       }

@@ -19,7 +19,7 @@ apiready = function() {
 function fnOpenNoticeDetail(notice_id){
   api.openWin({
       name: 'notice_detail',
-      url: './notice_detail.html',
+      url: './notice_detail_win.html',
       pageParam: {
         id:notice_id
       }

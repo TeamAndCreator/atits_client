@@ -19,7 +19,7 @@ apiready = function() {
 function fnOpenActivityDetail(activity_id){
   api.openWin({
       name: 'activity_detail',
-      url: './activity_detail.html',
+      url: './activity_detail_win.html',
       pageParam: {
         id:activity_id
       }

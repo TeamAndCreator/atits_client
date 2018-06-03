@@ -19,7 +19,7 @@ apiready = function() {
 function fnOpenReportDetail(report_id){
   api.openWin({
       name: 'report_detail',
-      url: './report_detail.html',
+      url: './report_detail_win.html',
       pageParam: {
         id:report_id
       }
