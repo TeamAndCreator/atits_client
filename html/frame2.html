@@ -5,18 +5,25 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title>我的</title>
-    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
     <style>
+    .h3 {
+        height: 10px;
+        background: #f0f0f0;
+    }
+
     .logout{
         text-align: center;
         line-height : 40px;
-        width : 200px;
+        width : 150px;
         height : 40px;
         border : 1px solid red;
         border-radius : 8px;
         background-color: red;
-        margin :430px auto 5px;
+        margin-top : 230px;
+        position : absolute;
+        left : 50%;
+        margin-left : -75px;
       }
       .logout span{
         color : #fff;
@@ -25,13 +32,67 @@
   </style>
 </head>
 <body>
+
+  <ul class="aui-list aui-list-in">
+          <div class="h3"></div>
+            <li class="aui-list-item aui-list-item-middle" tapmode onclick="fnOpenMyTaskWin();">
+                <div class="aui-list-item-inner aui-list-item-arrow">
+                    个人任务
+                </div>
+          </li>
+            <div class="h3"></div>
+            <li class="aui-list-item" tapmode onclick="fnOpenMyEvaluateWin();">
+                <div class="aui-list-item-inner aui-list-item-arrow">
+                    考评
+                </div>
+            </li>
+          <div class="h3"></div>
+            <li class="aui-list-item" tapmode onclick="fnOpenMyMessageWin();">
+                <div class="aui-list-item-inner aui-list-item-arrow">
+                    个人信息设置
+                </div>
+
+            </li>
+        </ul>
+
     <div class="logout">
       <span>退出登录</span>
     </div>
 </body>
-<script type="text/javascript" src="../script/jquery.min.js"></script>
-<script type="text/javascript" src="../script/api.js"></script>
-<script type="text/javascript" src="../script/personalcenter.js"></script>
-<script type="text/javascript" src="../script/url.js"></script>
 
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+function fnOpenMyTaskWin() {
+    //alert($api.jsonToStr(userInfo));
+    api.openWin({
+        name: 'my_task',
+        url: './my_task_win.html',
+        pageParam: {
+            name: 'test'
+        }
+    });
+}
+
+function fnOpenMyEvaluateWin() {
+    //alert($api.jsonToStr(userInfo));
+    api.openWin({
+        name: 'my_evaluate',
+        url: './my_evaluate_win.html',
+        pageParam: {
+            name: 'test'
+        }
+    });
+}
+
+function fnOpenMyMessageWin() {
+    //alert($api.jsonToStr(userInfo));
+    api.openWin({
+        name: 'my_message',
+        url: './my_message_win.html',
+        pageParam: {
+            name: 'test'
+        }
+    });
+}
+</script>
 </html>
