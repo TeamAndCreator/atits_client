@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>开发</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+        table {
+            width: 100%;
+            text-align: center;
+        }
+
+        table {
+            border: 1px solid #ccc;
+        }
+
+        thead {
+            background-color: #eee;
+        }
+
+        tbody {
+            background-color: #f9f9f9;
+        }
+
+        .state {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+  <!--已到考评时间，显示考评页面-->
+    <table>
+        <thead>
+            <tr>
+                <th>年度</th>
+                <th>被评分人</th>
+                <th> 评分详情</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2018</td>
+                <td>吴忠橙</td>
+                <td class="state" tapmode onclick="fnOpenMyEvalusteDetailWin();">考评</td>
+            </tr>
+            <tr>
+                <td>2018</td>
+                <td>吴忠橙</td>
+                <td class="state">考评</td>
+            </tr>
+            <tr>
+                <td>2018</td>
+                <td>吴忠橙</td>
+                <td class="state">考评</td>
+            </tr>
+            <tr>
+                <td>2018</td>
+                <td>吴忠橙</td>
+                <td class="state">考评</td>
+            </tr>
+            <tr>
+                <td>2018</td>
+                <td>吴忠橙</td>
+                <td class="state">考评</td>
+            </tr>
+            <tr>
+                <td>2018</td>
+                <td>吴忠橙</td>
+                <td class="state">考评</td>
+            </tr>
+        </tbody>
+    </table>
+
+  <!--未到考评时间 ，显示提示条
+<div class="aui-tips aui-margin-b-15">
+            <i class="aui-iconfont aui-icon-info"></i>
+            <div class="aui-tips-title">未到考评时间，无法进入</div>
+            <i class="aui-iconfont"></i>
+</div>
+-->
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    function fnOpenMyEvalusteDetailWin() {
+        //alert($api.jsonToStr(userInfo));
+        api.openWin({
+            name: 'my_evaluate_detail',
+            url: './my_evaluate_detail_win.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+</script>
+
+</html>
