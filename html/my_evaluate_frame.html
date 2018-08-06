@@ -42,6 +42,7 @@
                 <th> 评分详情</th>
             </tr>
         </thead>
+
         <tbody>
             <tr>
                 <td>2018</td>
@@ -86,17 +87,6 @@
 
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
-<script type="text/javascript">
-    function fnOpenMyEvalusteDetailWin() {
-        //alert($api.jsonToStr(userInfo));
-        api.openWin({
-            name: 'my_evaluate_detail',
-            url: './my_evaluate_detail_win.html',
-            pageParam: {
-                name: 'test'
-            }
-        });
-    }
-</script>
+<script type="text/javascript" src="../script/my_evaluate_frame.js"></script>
 
 </html>

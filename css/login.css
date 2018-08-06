@@ -1,0 +1,86 @@
+
+    .logo {
+        margin-left: 100px;
+        margin-top: 40px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .aui {
+        margin-left: 25px;
+        margin-top: 20px;
+    }
+
+    input {
+        outline: none;
+        font-weight: lighter;
+        font-size: 15px;
+    }
+
+    .aui-list-item {
+        border: 1px solid #ccc;
+        width: 300px;
+        height: 48px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .aui-list-item-input {
+        margin-left: 15px;
+        font-weight: lighter;
+        color: #ccc;
+        font-size: 15px;
+        margin-top: 15px;
+        float: left;
+    }
+
+    .aui-list-item-label-icon {
+        margin-top: 15px;
+        margin-right: 10px;
+        float: right;
+    }
+
+    .aui-list-item-label-icon img {
+        width: 20px;
+    }
+
+    .tip a {
+        float: right;
+        margin-right: 22px;
+        color: #ccc;
+        font-weight: lighter;
+    }
+
+    button{
+      outline : none;
+    }
+    .login {
+        margin-top: 55px;
+        background-color: rgb(98, 184, 25);
+        border-radius: 8px;
+        width: 310px;
+        height: 48px;
+        text-align: center;
+        line-height: 48px;
+        font-size: 18px;
+    }
+
+    .login a {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .footer {
+        margin-top: 50px;
+        text-align: center;
+        color: #ccc;
+    }
+
+    .footer a {
+        color: #ccc;
+        font-size: 15px;
+        font-weight: lighter;
+    }
