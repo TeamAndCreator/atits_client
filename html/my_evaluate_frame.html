@@ -25,68 +25,30 @@
             background-color: #f9f9f9;
         }
 
-        .state {
-            color: red;
-        }
+    
     </style>
 </head>
 
 <body>
 
-  <!--已到考评时间，显示考评页面-->
     <table>
         <thead>
             <tr>
                 <th>年度</th>
-                <th>被评分人</th>
-                <th> 评分详情</th>
+                <th>被考评人员</th>
+                <th>打分</th>
             </tr>
         </thead>
-
-        <tbody>
-            <tr>
-                <td>2018</td>
-                <td>吴忠橙</td>
-                <td class="state" tapmode onclick="fnOpenMyEvalusteDetailWin();">考评</td>
-            </tr>
-            <tr>
-                <td>2018</td>
-                <td>吴忠橙</td>
-                <td class="state">考评</td>
-            </tr>
-            <tr>
-                <td>2018</td>
-                <td>吴忠橙</td>
-                <td class="state">考评</td>
-            </tr>
-            <tr>
-                <td>2018</td>
-                <td>吴忠橙</td>
-                <td class="state">考评</td>
-            </tr>
-            <tr>
-                <td>2018</td>
-                <td>吴忠橙</td>
-                <td class="state">考评</td>
-            </tr>
-            <tr>
-                <td>2018</td>
-                <td>吴忠橙</td>
-                <td class="state">考评</td>
-            </tr>
+        <tbody id="form-content">
         </tbody>
     </table>
 
-  <!--未到考评时间 ，显示提示条
-<div class="aui-tips aui-margin-b-15">
-            <i class="aui-iconfont aui-icon-info"></i>
-            <div class="aui-tips-title">未到考评时间，无法进入</div>
-            <i class="aui-iconfont"></i>
-</div>
--->
+
 
 </body>
+<script type="text/javascript" src="../script/jquery.min.js"></script>
 <script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/url.js"></script>
 <script type="text/javascript" src="../script/my_evaluate_frame.js"></script>
 
 </html>

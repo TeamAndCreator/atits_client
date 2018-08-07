@@ -11,7 +11,7 @@ var slide = new auiSlide({
 })
 
 function currentFun(index) {
-//     console.log(index);
+    console.log(index);
  }
 
 //打开一个新窗口先打开他的win窗口，再到frame
