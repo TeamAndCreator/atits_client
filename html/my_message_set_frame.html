@@ -7,101 +7,65 @@
     <title>我的</title>
     <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
     <style>
-
+    .h10 {
+        height: 10px;
+        background: #f0f0f0;
+    }
     </style>
   </head>
   <body>
+
+  <div class="h10"></div>
 <ul class="aui-list aui-form-list">
+
             <li class="aui-list-item">
                 <div class="aui-list-item-inner">
-                    <div class="aui-list-item-label" style="width : 48%">
-                        用户名
+                    <div class="aui-list-item-label" style="width:25%;margin-right:20px;font-size:15px;">
+                        旧密码
                     </div>
                     <div class="aui-list-item-input">
-                        <input type="text" placeholder="Name">
+                        <input type="password" id="oldPassword" placeholder="填写原始密码"><div style="display:inline;float:right;margin-top:-35px" id="tip1"></div>
                     </div>
                 </div>
             </li>
             <li class="aui-list-item">
                 <div class="aui-list-item-inner">
-                    <div class="aui-list-item-label" style="width : 48%">
-                        设置密码
+                    <div class="aui-list-item-label" style="width:25%;margin-right:20px;font-size:15px;">
+                        新密码
                     </div>
                     <div class="aui-list-item-input">
-                        <input type="password" placeholder="Password">
+                        <input type="password" id="newPassword" placeholder="填写新密码"><div style="display:inline;float:right;margin-top:-35px" id="tip2"></div>
                     </div>
                 </div>
             </li>
             <li class="aui-list-item">
                 <div class="aui-list-item-inner">
-                    <div class="aui-list-item-label" style="width : 48%">
-                        请再次输入密码
+                    <div class="aui-list-item-label" style="width:25%;margin-right:20px;font-size:15px;">
+                        确认密码
                     </div>
                     <div class="aui-list-item-input">
-                        <input type="password" placeholder="Password">
-                    </div>
-                </div>
-            </li>
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <div class="aui-list-item-label" style="width : 48%">
-                        姓名
-                    </div>
-                    <div class="aui-list-item-input">
-                        <input type="text" placeholder="Name">
-                    </div>
-                </div>
-            </li>
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <div class="aui-list-item-label" style="width : 48%">
-                        手机号码
-                    </div>
-                    <div class="aui-list-item-input">
-                        <input type="number" placeholder="Number">
-                    </div>
-                </div>
-            </li>
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <div class="aui-list-item-label" style="width : 48%">
-                        办公室电话
-                    </div>
-                    <div class="aui-list-item-input">
-                        <input type="number" placeholder="Number">
-                    </div>
-                </div>
-            </li>
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <div class="aui-list-item-label" style="width : 48%">
-                        电子邮箱
-                    </div>
-                    <div class="aui-list-item-input">
-                        <input type="text" placeholder="Email">
+                        <input type="password" id="repeatPassword" placeholder="再次填写确认"><div style="display:inline;float:right;margin-top:-35px" id="tip3"></div>
                     </div>
                 </div>
             </li>
 
-
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <div class="aui-list-item-label" style="width : 48%">
-                        工作单位
-                    </div>
-                    <div class="aui-list-item-input">
-                        <input type="text" placeholder="workplace">
-                    </div>
-                </div>
+            <li style="margin-top:10px;margin-left:16px;font-size:13px;color:#aaa;font-weight:200">
+              密码必须是8-16位，数字/字母/字符两种组合
             </li>
+
+
+
+
             <li class="aui-list-item">
                 <div class="aui-list-item-inner aui-list-item-center aui-list-item-btn">
-                  <div class="aui-btn" style="background-color:#87b87f;color:#fff;margin-right:25px;">提交</div>
-                  <div class="aui-btn" style="background-color:#abbac3;color:#fff;margin-left:25px;">取消</div>
+                  <div class="aui-btn" id="saveBtn" style="background-color:#87b87f;color:#fff;margin-right:25px;">提交</div>
+                  <div class="aui-btn" id="close" style="background-color:#abbac3;color:#fff;margin-left:25px;">取消</div>
                 </div>
             </li>
         </ul>
   </body>
-
+  <script type="text/javascript" src="../script/jquery.min.js"></script>
   <script type="text/javascript" src="../script/api.js"></script>
+  <script type="text/javascript" src="../script/url.js"></script>
+  <script type="text/javascript" src="../script/my_message_set_frame.js"></script>
   </html>

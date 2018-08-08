@@ -15,9 +15,13 @@ apiready = function(){
                                 //console.log(JSON.stringify(result));
                                 //  console.log(JSON.stringify(result.data.user.id));
                                 var userId = JSON.stringify(result.data.user.id);
+                                var userName = JSON.stringify(result.data.user.userName);
                                 var systemId = JSON.stringify(result.data.user.system.id);
                                 var systemName = JSON.stringify(result.data.user.system.systemName);
+                                var password = JSON.stringify(result.data.user.password);
+                                $api.setStorage('password', password);
                                 $api.setStorage('userId', userId);
+                                $api.setStorage('userName', userName);
                                 $api.setStorage('systemName', systemName);
                                 $api.setStorage('systemId', systemId);
                                 api.alert({
@@ -30,7 +34,7 @@ apiready = function(){
                                             pageParam: {
                                                 name: 'test'
                                             }
-                                });                              
+                                });
                             }else{
                                 alert(result.msg);
                             }

@@ -50,6 +50,7 @@ $('#yes').click(function() {
                 name: 'my_evaluate',
                 url: './my_evaluate_win.html',
             });
+  console.log(JSON.stringify(result));
 
         }
     });
