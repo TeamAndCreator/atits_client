@@ -2,7 +2,7 @@ apiready = function(){
    urlParam = param + '/profile/findByUserId';
    //console.log($api.getStorage('userId'));
    var userId = $api.getStorage('userId');
-   console.log(userId);
+  // console.log(userId);
   $.ajax({
           url: urlParam,
           type: 'get',

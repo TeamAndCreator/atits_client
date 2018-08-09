@@ -1,16 +1,27 @@
 apiready = function() {
+    urlParam1 = param + '/user/verifyPassword';
+    urlParam2 = param + '/user/changePassword';
 
-    urlParam = param + '/profile/';
-
-   var psw = $api.getStorage('password');
-    console.log(psw);
     $("#oldPassword").blur(function() {
         var oldPsw = $("#oldPassword").val();
-        if ( oldPsw == psw ) {
-            $("#tip1").html("<font color=\"#87b87f\" size=\"2\"> 密码正确 </font>");
-        } else {
-            $("#tip1").html("<font color=\"red\" size=\"2\"> 密码错误 </font>");
-        }
+        $.ajax({
+            url : urlParam1,
+            type : 'post',
+            dataType: 'json',
+            data:{
+              "userId" : $api.getStorage('userId'),
+              "password" : oldPsw,
+            },
+            success : function(result){
+              //console.log(11)
+              if(result.code == 100){
+                  $("#tip1").html("<font color=\"#87b87f\" size=\"2\"> 密码正确 </font>");
+              }
+              if(result.code == 200){
+                  $("#tip1").html("<font color=\"red\" size=\"2\"> 密码错误 </font>");
+              }
+            }
+        })
     });
 
     $("#newPassword").blur(function() {
@@ -30,7 +41,7 @@ apiready = function() {
             $("#tip3").html("<font color=\"red\" size=\"2\">  密码错误 </font>");
         } else {
             if (num >= 6 && num <= 18) {
-                $("#tip3").html("<font color=\"#87b87f\" size=\"2\"> 密码正确 </font>");
+                $("#tip3").html("<font color=\"#87b87f\" size=\"2\"> 合格 </font>");
             } else {
                 $("#tip3").html("<font color=\"red\" size=\"2\"> 不合格  </font>");
             }
@@ -49,12 +60,23 @@ apiready = function() {
             flag = true;
         }
         if (flag) {
+
             $.ajax({
-                url: urlParam,
-                data: '',
+                url : 'http://47.104.26.79:8080/atits_service/user/changePassword',
+                type : 'post',
+                dataType: 'json',
+                async: false,
+                traditional: true,
+                data:{
+                  _method: "put",
+                  "userId" : $api.getStorage('userId'),
+                  "password" : pass,
+                },
                 success: function(result) {
-                    if (result.code == 1) {
-                        $("#tip4").show().html("<font color=\"#87b87f\" size=\"3\"> 密码修改成功!</font>");
+                       //console.log(33)
+                    if (result.code == 100) {
+                      //console.log(44)
+                        alert('密码修改成功！')
                         $("#oldPassword").val("");
                         $("#newPassword").val("");
                         $("#repeatPassword").val("");
@@ -62,13 +84,24 @@ apiready = function() {
                         $("#tip2").empty();
                         $("#tip3").empty();
                         $("#tip4").delay(2000).hide(0);
+
                     } else {
-                        $("#tip4").show().html("<font color=\"red\" size=\"3\"> 密码修改失败! </font>");
+                        alert('密码修改失败！')
                     }
                 }
+
             });
         } else {
             $("#tip4").show().html("<font color=\"red\" size=\"3\">  密码修改失败!</font>");
         }
     });
+
+    $('#close').click(function(){
+        api.openWin({
+            name: 'my_message_frame',
+            url: './my_message_win.html',
+
+        });
+
+    })
 }
