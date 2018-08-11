@@ -1,39 +1,44 @@
-apiready = function() {
-  keybackEventListener();
-}
+apiready = function(){
+        keybackEventListener();
+        is_login();
 
-$(".login").on("click", function() {
-    urlParam = param +'/login/login';
-    $.ajax({
-        url: urlParam,
-        type: 'post',
-        data: $("#login_form").serialize(),
-        dataType: 'json',
-        success: function(result) {
-            if (result.code == 100) {
-                $api.setStorage('userInfo', 'result');
-                api.alert({
-                    title: '提示',
-                    msg: '登录成功',
-                }, function(ret, err) {
-                    if (ret) {
-                        api.openWin({
-                            name: 'index',
-                            url: '../index.html',
-                            pageParam: {
-                                name: 'test'
+        $(".login").on("click", function(){
+                urlParam = param + '/login/login';
+                // console.log(document.cookie);
+                $.ajax({
+                        url: urlParam,
+                        type: 'post',
+                        data: $("#login_form").serialize(),
+                        dataType: 'json',
+                        success: function(result){
+                            if(result.code == 100){
+                                //console.log(JSON.stringify(result));
+                                //  console.log(JSON.stringify(result.data.user.id));
+                                var userId = JSON.stringify(result.data.user.id);
+                                var userName = JSON.stringify(result.data.user.userName);
+                                var systemId = JSON.stringify(result.data.user.system.id);
+                                var systemName = JSON.stringify(result.data.user.system.systemName);
+                                var password = JSON.stringify(result.data.user.password);
+                                $api.setStorage('password', password);
+                                $api.setStorage('userId', userId);
+                                $api.setStorage('userName', userName);
+                                $api.setStorage('systemName', systemName);
+                                $api.setStorage('systemId', systemId);
+                                api.alert({
+                                    title: '提示',
+                                    msg: '登录成功',
+                                }),
+                                api.openWin({
+                                            name: 'index',
+                                            url: '../index.html',
+                                            pageParam: {
+                                                name: 'test'
+                                            }
+                                });
+                            }else{
+                                alert(result.msg);
                             }
-                        });
-                    } else {
-                        alert(JSON.stringify(err));
-                    }
+                        }
                 });
-            } else {
-                alert(result.msg);
-            }
-            // console.log(JSON.stringify(result));
-
-
-        }
-    });
-});
+  })
+}

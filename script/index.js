@@ -34,9 +34,9 @@ function keybackEventListener() {
     });
 }
 
-//
+
 function is_login() { //这是判断是否登陆的
-    var uid = $api.getStorage('uid');
+    var uid = $api.getStorage('userId');
     if (uid == null) {
         //关闭frame组
         api.closeFrameGroup({
