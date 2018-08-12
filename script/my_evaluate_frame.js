@@ -24,7 +24,7 @@ apiready = function() {
             "evaluationId": $api.getStorage('userId')
         },
         success: function(result) {
-            //console.log(JSON.stringify(result.data.testScores.testStart.state));
+            console.log(JSON.stringify(result.data.testScores));
             api.hideProgress(); //隐藏加载进度框
             var htmlStr = '';
             for (i = 0; i < JSON.stringify(result.data.testScores.length); i++) {
