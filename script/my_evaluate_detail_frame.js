@@ -1,12 +1,13 @@
 apiready = function() {
 
     var userRole = $api.getStorage('userRole');
-    //console.log(userRole);
+    console.log(userRole);
     if (userRole == 1 || userRole == 2) {
         $('#score1').css("display", "block");
         $('#sub').css("display", "block");
     } else if (userRole == 3) {
-        $('#score2').css("display", "block");
+        $('#socre2').css("display", "block");
+        $('#remove').css("display","none");
         $('#sub').css("display", "block");
     } else if (userRole == 4) {
         $('#score3').css("display", "block");
