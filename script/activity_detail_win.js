@@ -4,9 +4,7 @@ apiready = function() {
     $api.fixStatusBar(header);
     var headerPos = $api.offset(header);
     var body_h = $api.offset($api.dom('body')).h;
-
     var system_id = api.pageParam.id; //接收manegement——frame页面传递过来的id参数
-
     api.openFrame({
         name: 'activity',
         url: './activity_detail.html',

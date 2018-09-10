@@ -1,18 +1,26 @@
+
+//轮播图
 var slide = new auiSlide({
     container: document.getElementById("aui-slide"),
     // "width":300,
-    "height": 230,
-    "speed": 300,
-    "pageShow": true,
-    "pageStyle": 'dot',
-    "loop": true,
-    'dotPosition': 'center',
+    // "height": 235,
+    // "speed": 300,
+    // "pageShow": true,
+    // "pageStyle": 'dot',
+    // "loop": true,
+    // 'dotPosition': 'center',
+     interval: 3000,   //自动播放间隔时间 单位ms
+     autoplay: true,   // 是否自动播放
+     indicator: true,  // 是否显示指示器
+    circular: true,  // 是否采用衔接滑动
     currentPage: currentFun
 })
 
 function currentFun(index) {
-    console.log(index);
+    return (index) ;
  }
+
+
 
 //打开一个新窗口先打开他的win窗口，再到frame
 function fnOpenSystemWin() {

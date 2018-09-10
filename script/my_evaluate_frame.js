@@ -1,6 +1,4 @@
 function fnOpenMyEvalusteDetailWin(role) {
-
-
      $api.setStorage('userRole',role);
      api.openWin({
          name: 'my_evaluate_detail',
@@ -9,7 +7,6 @@ function fnOpenMyEvalusteDetailWin(role) {
              role  : role,
          }
      });
-
 }
 
 apiready = function() {
@@ -42,20 +39,7 @@ apiready = function() {
 
     if($('.state').html() == 1){
       $('.state').html('<span class="aui-btn aui-btn-success"> 评分 </span>');
-      function fnOpenMyEvalusteDetailWin(role) {
-           $api.setStorage('userRole',role);
-           api.openWin({
-               name: 'my_evaluate_detail',
-               url: './my_evaluate_detail_win.html',
-               pageParam: {
-                   role  : role,
-               }
-           });
-      }
     }else{
       $('.state').html('<span class="aui-btn aui-btn-default"> 未评分 </span>');
     }
-
-
-
 }

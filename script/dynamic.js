@@ -1,4 +1,5 @@
 apiready = function() {
+  api.showProgress(); //显示加载进度框
   //根据不同角色，获取不同数据
       if ($api.getStorage('systemId') == 1) {
           $.ajax({
@@ -9,11 +10,15 @@ apiready = function() {
               type: "get",
               async: false,
               success: function (result) {
+                  api.hideProgress();
                   var dynamics = result.data.dynamics;
                   $.each(dynamics, function(index, dynamic) {
                       var liEle = '<li><a tapmode onclick="fnOpenDynamicDetail('+dynamic.id+')";><p class="wz-l">' + dynamic.title + '</p><span class="wz-r">' + dynamic.date + '</span></a></li>';
                       $(liEle).appendTo("ul");
                   });
+              },
+              error : function(){
+                alert("获取数据失败！")
               }
 
           });
@@ -26,11 +31,15 @@ apiready = function() {
               type: "get",
               async: false,
               success: function (result) {
+                api.hideProgress();
                 var dynamics = result.data.dynamics;
                 $.each(dynamics, function(index, dynamic) {
                     var liEle = '<li><a tapmode onclick="fnOpenDynamicDetail('+dynamic.id+')";><p class="wz-l">' + dynamic.title + '</p><span class="wz-r">' + dynamic.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
                 });
+              },
+              error : function(){
+                alert("获取数据失败！")
               }
 
           });
@@ -43,11 +52,15 @@ apiready = function() {
               type: "get",
               async: false,
               success: function (result) {
+                api.hideProgress(); 
                 var dynamics = result.data.dynamics;
                 $.each(dynamics, function(index, dynamic) {
                     var liEle = '<li><a tapmode onclick="fnOpenDynamicDetail('+dynamic.id+')";><p class="wz-l">' + dynamic.title + '</p><span class="wz-r">' + dynamic.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
                 });
+              },
+              error : function(){
+                alert("获取数据失败！")
               }
 
           });

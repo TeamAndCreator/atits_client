@@ -1,4 +1,5 @@
 apiready = function() {
+    api.showProgress();
   //根据不同角色，获取不同数据
       if ($api.getStorage('systemId') == 1) {
           $.ajax({
@@ -9,11 +10,15 @@ apiready = function() {
               type: "get",
               async: false,
               success: function (result) {
+                  api.hideProgress();
                   var notices = result.data.notices;
                   $.each(notices, function(index, notice) {
                       var liEle = '<li><a tapmode onclick="fnOpenNoticeDetail('+notice.id+')";><p class="wz-l">' + notice.title + '</p><span class="wz-r">' + notice.date + '</span></a></li>';
                       $(liEle).appendTo("ul");
                   });
+              },
+              error : function(){
+                alert("获取数据失败！")
               }
 
           });
@@ -26,11 +31,15 @@ apiready = function() {
               type: "get",
               async: false,
               success: function (result) {
+                api.hideProgress();
                 var noties = result.data.noities;
                 $.each(notices, function(index, notice) {
                   var liEle = '<li><a tapmode onclick="fnOpenNoticeDetail('+notice.id+')";><p class="wz-l">' + notice.title + '</p><span class="wz-r">' + notice.date + '</span></a></li>';
                   $(liEle).appendTo("ul");
                 });
+              },
+              error : function(){
+                alert("获取数据失败！")
               }
 
           });
@@ -43,11 +52,15 @@ apiready = function() {
               type: "get",
               async: false,
               success: function (result) {
+                api.hideProgress();
                 var notices = result.data.notices;
                 $.each(notices, function(index, notice) {
                   var liEle = '<li><a tapmode onclick="fnOpenNoticeDetail('+notice.id+')";><p class="wz-l">' + notice.title + '</p><span class="wz-r">' + notice.date + '</span></a></li>';
                   $(liEle).appendTo("ul");
                 });
+              },
+              error : function(){
+                alert("获取数据失败！")
               }
 
           });

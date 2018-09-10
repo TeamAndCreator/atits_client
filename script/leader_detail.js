@@ -1,8 +1,7 @@
 apiready = function() {
-
+    api.showProgress();
     var system_id = api.pageParam.id;
     urlParam = param + '/system/findUsers';
-
     $.ajax({
         url: urlParam,
         type: 'get',
@@ -11,6 +10,7 @@ apiready = function() {
         },
         dataType: 'json',
         success: function(result) {
+            api.hideProgress(); 
             // console.log(JSON.stringify(result));
             var systemuser = result.data;
             var Ele = '<div class="row"><h3>首席专家</h3><div class = "row well"><h4>' + systemuser.chief + '</h4></div></div>';
@@ -27,6 +27,9 @@ apiready = function() {
 
             $(Ele).appendTo("div");
 
+        },
+        error : function(){
+          alert("获取数据失败！")
         }
     });
 

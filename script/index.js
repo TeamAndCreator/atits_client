@@ -45,7 +45,7 @@ function is_login() { //这是判断是否登陆的
         //跳转登录页面
         api.openWin({
             name: 'login',
-            url: 'html/login.html',
+            url: './html/login.html',
             slidBackEnabled: false,
             reload: true,
             animation: {

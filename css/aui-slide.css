@@ -1,19 +1,11 @@
-/**
- * aui-slide.css 轮播样式
- * verson 0.0.2
- * @author 流浪男
- * http://www.auicss.com
- * @todo more things to abstract, e.g. Loading css etc.
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
+
 .aui-slide-wrap {
     display: block;
     position: relative;
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 160px;
+    height: 230px;
     width: 100%;
     overflow: hidden;
 }
@@ -30,7 +22,7 @@
     background: #ffffff;
 }
 .aui-slide-node-center {
-	display: -moz-box;
+	  display: -moz-box;
     display: -webkit-box;
     display: box;
     -moz-box-pack: center;
@@ -110,4 +102,36 @@
 .aui-slide-prev-btn:active,
 .aui-slide-next-btn:active {
     color: #f1c40f;
+}
+
+
+//内容区域
+.con{
+  width:100%;
+  height:auto;
+}
+.con-1{
+  display: inline-block;
+  width:32%;
+  height:auto;
+  text-align: center;
+  margin-top:20px;
+
+}
+
+.con-1 a{
+  display: inline-block;
+  width:90px;
+}
+.con-1 a img{
+  width:40px;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+.con-1 a span{
+  margin-top: 5px;
+  display: inline-block;
+  text-align: center;
+  color:#424242;
 }

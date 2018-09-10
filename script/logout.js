@@ -8,7 +8,7 @@ apiready = function() {
           type: 'get',
           dataType: 'json',
           success: function(result) {
-              if (result.code == 100) {      
+              if (result.code == 100) {
                   // $api.setStorage('userInfo', 'result');
                   api.openWin({
                       name: 'login',

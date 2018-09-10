@@ -1,7 +1,6 @@
 apiready = function() {
-
+    api.showProgress();
     urlParam = param + '/system/findById';
-
     $.ajax({
         url: urlParam,
         type: 'get',
@@ -10,12 +9,14 @@ apiready = function() {
         },
         dataType: 'json',
         success: function(result) {
+            api.hideProgress();
             // console.log(JSON.stringify(result));
             var system = result.data.system;
             var Ele = '<div class="widget-main"><p>&nbsp;&nbsp;'+system.content+'</p></div>';
-
             $(Ele).appendTo("div");
-
+        },
+        error : function(){
+          alert("获取数据失败！")
         }
     });
 

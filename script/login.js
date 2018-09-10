@@ -34,16 +34,16 @@ apiready = function(){
                                 api.alert({
                                         title: '提示',
                                         msg: '登录成功',
-                                    }),
-                                    api.openWin({
+                                }),
+                                api.openWin({
                                         name: 'index',
                                         url: '../index.html',
                                         pageParam: {
                                             name: 'test'
                                         }
-                                    });
+                                });
                             } else {
-                                alert(result.msg);
+                                alert("登录出现异常，请重新登录！");
                             }
                         }
                 });

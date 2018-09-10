@@ -1,7 +1,6 @@
 apiready = function() {
     urlParam1 = param + '/user/verifyPassword';
     urlParam2 = param + '/user/changePassword';
-
     $("#oldPassword").blur(function() {
         var oldPsw = $("#oldPassword").val();
         $.ajax({
@@ -34,6 +33,7 @@ apiready = function() {
             $("#tip2").html("<font color=\"#87b87f\" size=\"2\"> 合格 </font>");
         }
     });
+
     $("#repeatPassword").blur(function() {
         var tmp = $("#newPassword").val();
         var num = $("#repeatPassword").val().length;
@@ -47,6 +47,7 @@ apiready = function() {
             }
         }
     });
+
     $("#saveBtn").click(function() {
         var flag = true;
         var old = $("#oldPassword").val();
@@ -60,7 +61,6 @@ apiready = function() {
             flag = true;
         }
         if (flag) {
-
             $.ajax({
                 url : 'http://47.104.26.79:8080/atits_service/user/changePassword',
                 type : 'post',
@@ -73,9 +73,7 @@ apiready = function() {
                   "password" : pass,
                 },
                 success: function(result) {
-                       //console.log(33)
                     if (result.code == 100) {
-                      //console.log(44)
                         alert('密码修改成功！')
                         $("#oldPassword").val("");
                         $("#newPassword").val("");
@@ -84,12 +82,13 @@ apiready = function() {
                         $("#tip2").empty();
                         $("#tip3").empty();
                         $("#tip4").delay(2000).hide(0);
-
                     } else {
                         alert('密码修改失败！')
                     }
+                },
+                error:function(){
+                  alert('密码修改失败！')
                 }
-
             });
         } else {
             $("#tip4").show().html("<font color=\"red\" size=\"3\">  密码修改失败!</font>");
@@ -100,7 +99,6 @@ apiready = function() {
         api.openWin({
             name: 'my_message_frame',
             url: './my_message_win.html',
-
         });
 
     })

@@ -22,6 +22,7 @@
         $api.fixStatusBar(header);
         var headerPos = $api.offset(header);
         var body_h = $api.offset($api.dom('body')).h;
+        var my_task_id = api.pageParam.id;
         api.openFrame({
             name: 'my_task_detail',
             url: './my_task_detail_frame.html',
@@ -31,6 +32,9 @@
                 y: headerPos.h,
                 w: 'auto',
                 h: 'auto'
+            },
+            pageParam:{
+              id:my_task_id
             }
         })
     };
@@ -39,4 +43,5 @@
         });
     }
 </script>
+
 </html>

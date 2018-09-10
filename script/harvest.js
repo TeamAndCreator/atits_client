@@ -1,4 +1,5 @@
 apiready = function() {
+  api.showProgress();
 //根据不同角色，获取不同数据
     if ($api.getStorage('systemId') == 1) {
         $.ajax({
@@ -9,11 +10,15 @@ apiready = function() {
             type: "get",
             async: false,
             success: function (result) {
+                api.hideProgress();
                 var harvests = result.data.harvests;
                 $.each(harvests, function(index, harvest) {
                     var liEle = '<li><a tapmode onclick="fnOpenHarvestDetail('+harvest.id+')";><p class="wz-l">' + harvest.title + '</p><span class="wz-r">' + harvest.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
                 });
+            },
+            error : function(){
+              alert("获取数据失败！")
             }
 
         });
@@ -26,11 +31,15 @@ apiready = function() {
             type: "get",
             async: false,
             success: function (result) {
+              api.hideProgress();
               var harvests = result.data.harvests;
               $.each(harvests, function(index, harvest) {
                   var liEle = '<li><a tapmode onclick="fnOpenHarvestDetail('+harvest.id+')";><p class="wz-l">' + harvest.title + '</p><span class="wz-r">' + harvest.date + '</span></a></li>';
                   $(liEle).appendTo("ul");
               });
+            },
+            error : function(){
+              alert("获取数据失败！")
             }
 
         });
@@ -43,21 +52,20 @@ apiready = function() {
             type: "get",
             async: false,
             success: function (result) {
+              api.hideProgress();
               var harvests = result.data.harvests;
               $.each(harvests, function(index, harvest) {
                   var liEle = '<li><a tapmode onclick="fnOpenHarvestDetail('+harvest.id+')";><p class="wz-l">' + harvest.title + '</p><span class="wz-r">' + harvest.date + '</span></a></li>';
                   $(liEle).appendTo("ul");
               });
+            },
+            error : function(){
+              alert("获取数据失败！")
             }
 
         });
     }
 }
-
-
-
-
-
 function fnOpenHarvestDetail(harvest_id){
   api.openWin({
       name: 'harvest_detail',
