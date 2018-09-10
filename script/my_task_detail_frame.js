@@ -11,13 +11,16 @@ apiready = function () {
         success: function (result) {
             api.hideProgress(); //隐藏加载进度框
             //console.log(JSON.stringify(result));
-            $('#title').text(JSON.stringify(result.data.task.title));
-            $('#systemName').text(JSON.stringify(result.data.task.title.system.systemName));
-            $('#startDate').text(JSON.stringify(result.data.task.title.stratTime));
-            $('#endDate').text(JSON.stringify(result.data.task.endTime));
-            $('#user').text(JSON.stringify(result.data.task.title.user.profile.name));
-            $('#date').text(JSON.stringify(result.data.task.title.date));
-            $('#content').html(JSON.stringify(result.data.task.content));
+          //  if(JSON.stringify(result.data.task)!=" null"){
+              $('#title').text(JSON.stringify(result.data.task.title));
+              $('#systemName').text(JSON.stringify(result.data.task.title.system.systemName));
+              $('#startDate').text(JSON.stringify(result.data.task.title.stratTime));
+              $('#endDate').text(JSON.stringify(result.data.task.endTime));
+              $('#user').text(JSON.stringify(result.data.task.title.user.profile.name));
+              $('#date').text(JSON.stringify(result.data.task.title.date));
+              $('#content').html(JSON.stringify(result.data.task.content));
+          //  }
+
         }
     });
 }

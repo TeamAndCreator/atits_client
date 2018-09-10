@@ -1,4 +1,7 @@
 
+
+
+
 //轮播图
 var slide = new auiSlide({
     container: document.getElementById("aui-slide"),
@@ -19,6 +22,7 @@ var slide = new auiSlide({
 function currentFun(index) {
     return (index) ;
  }
+
 
 
 

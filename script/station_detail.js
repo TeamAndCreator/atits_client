@@ -2,7 +2,6 @@ apiready = function() {
     api.showProgress();
     var station_id = api.pageParam.id;
     urlParam = param + '/station/findById';
-
     $.ajax({
         url: urlParam,
         type: 'get',
