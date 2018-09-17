@@ -22,6 +22,10 @@
         $api.fixStatusBar(header);
         var headerPos = $api.offset(header);
         var body_h = $api.offset($api.dom('body')).h;
+
+        var userRole = api.pageParam.userRole;
+        var score_id = api.pageParam.score_id;
+
         api.openFrame({
             name: 'my_evaluate_detail',
             url: './my_evaluate_detail_frame.html',
