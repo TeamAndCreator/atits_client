@@ -1,6 +1,7 @@
 apiready = function() {
     urlParam1 = param + '/user/verifyPassword';
     urlParam2 = param + '/user/changePassword';
+     var flag1,flag2,flag3;
     $("#oldPassword").blur(function() {
         var oldPsw = $("#oldPassword").val();
         $.ajax({
@@ -15,9 +16,11 @@ apiready = function() {
               //console.log(11)
               if(result.code == 100){
                   $("#tip1").html("<font color=\"#87b87f\" size=\"2\"> 密码正确 </font>");
+                  flag1 = true;
               }
               if(result.code == 200){
                   $("#tip1").html("<font color=\"red\" size=\"2\"> 密码错误 </font>");
+                  flag1 = false;
               }
             }
         })
@@ -25,12 +28,15 @@ apiready = function() {
 
     $("#newPassword").blur(function() {
         var num = $("#newPassword").val().length;
-        if (num < 6) {
+        if (num < 8) {
             $("#tip2").html("<font color=\"red\" size=\"2\"> 密码太短</font>");
+            flag2 = false;
         } else if (num > 18) {
             $("#tip2").html("<font color=\"red\" size=\"2\"> 密码太长</font>");
+            flag2 = false;
         } else {
             $("#tip2").html("<font color=\"#87b87f\" size=\"2\"> 合格 </font>");
+              flag2 = true;
         }
     });
 
@@ -39,11 +45,14 @@ apiready = function() {
         var num = $("#repeatPassword").val().length;
         if ($("#repeatPassword").val() != tmp) {
             $("#tip3").html("<font color=\"red\" size=\"2\">  密码错误 </font>");
+              flag3 = false;
         } else {
-            if (num >= 6 && num <= 18) {
+            if (num >= 8 && num <= 18) {
                 $("#tip3").html("<font color=\"#87b87f\" size=\"2\"> 合格 </font>");
+                  flag3 = true;
             } else {
                 $("#tip3").html("<font color=\"red\" size=\"2\"> 不合格  </font>");
+                  flag3 = false;
             }
         }
     });
@@ -55,12 +64,12 @@ apiready = function() {
         var pass2 = $("#repeatPassword").val();
         var num1 = $("#newPassword").val().length;
         var num2 = $("#repeatPassword").val().length;
-        if (num1 != num2 || num1 < 6 || num2 < 6 || num1 > 18 || num2 > 18 || pass != pass2) {
+        if (num1 != num2 || num1 < 8 || num2 < 8 || num1 > 18 || num2 > 18 || pass != pass2) {
             flag = false;
         } else {
             flag = true;
         }
-        if (flag) {
+        if (flag&&flag1&&falg2&&flag3) {
             $.ajax({
                 url : 'http://47.104.26.79:8080/atits_service/user/changePassword',
                 type : 'post',
@@ -91,7 +100,7 @@ apiready = function() {
                 }
             });
         } else {
-            $("#tip4").show().html("<font color=\"red\" size=\"3\">  密码修改失败!</font>");
+              alert('密码修改失败！')
         }
     });
 
