@@ -69,7 +69,7 @@ apiready = function() {
         } else {
             flag = true;
         }
-        if (flag&&flag1&&falg2&&flag3) {
+        if (flag&&flag1&&flag2&&flag3) {
             $.ajax({
                 url : 'http://47.104.26.79:8080/atits_service/user/changePassword',
                 type : 'post',
@@ -91,6 +91,19 @@ apiready = function() {
                         $("#tip2").empty();
                         $("#tip3").empty();
                         $("#tip4").delay(2000).hide(0);
+                          api.clearCache(function() {
+                              api.toast({
+                                  msg: '清除完成'
+                              });
+                          });
+                          api.openWin({
+                            name: 'login',
+                            url: 'login.html',
+                            slidBackEnabled:false,
+                            pageParam: {
+                                name: 'test'
+                            }
+                          });
                     } else {
                         alert('密码修改失败！')
                     }
