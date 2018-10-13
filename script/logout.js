@@ -10,9 +10,11 @@ apiready = function() {
           success: function(result) {
               if (result.code == 100) {
                   // $api.setStorage('userInfo', 'result');
+                  $api.clearStorage();
                   api.openWin({
                       name: 'login',
-                      url: './login.html',
+                      url: 'login.html',
+                      slidBackEnabled:false,
                       pageParam: {
                           name: 'test'
                       }
