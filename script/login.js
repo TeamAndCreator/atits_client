@@ -37,7 +37,7 @@ apiready = function(){
                                 }),
                                 api.openWin({
                                         name: 'index',
-                                        url: 'index.html',
+                                        url: '../index.html',
                                         pageParam: {
                                             name: 'test'
                                         }
