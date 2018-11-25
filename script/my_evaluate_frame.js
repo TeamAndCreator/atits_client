@@ -16,6 +16,7 @@ function fnOpenMyEvalusteDetailWin(role,id,status) {
 apiready = function() {
     urlParam = param + '/testscore/findByEvaluation';
     api.showProgress(); //显示加载进度框
+    api.addEventListener({name: 'viewappear'}, function(ret, err){
     $.ajax({
         url: urlParam,
         type: 'get',
@@ -44,7 +45,7 @@ apiready = function() {
 
                   }
              }
-
+            $("#form-content").empty();
             $("#form-content").append(htmlStr);
         },
         error: function(err){
@@ -52,4 +53,5 @@ apiready = function() {
         }
 
     });
+  })
 }
