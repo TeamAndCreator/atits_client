@@ -45,13 +45,7 @@ apiready = function(){
               }
     }
   })
-
-
-
 });
-
-
-
 }
 
 

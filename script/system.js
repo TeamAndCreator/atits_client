@@ -10,9 +10,9 @@ apiready = function() {
         dataType: 'json',
         success: function(result) {
             api.hideProgress();
-            // console.log(JSON.stringify(result));
+             //console.log(JSON.stringify(result));
             var system = result.data.system;
-            var Ele = '<div class="widget-main"><p>&nbsp;&nbsp;'+system.content+'</p></div>';
+            var Ele = '<div class="widget-main">'+system.content+'</div>';
             $(Ele).appendTo("div");
         },
         error : function(){

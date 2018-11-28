@@ -8,13 +8,14 @@
     <title>我的</title>
     <link rel="stylesheet" type="text/css" href="../css/aui.css" />
     <style>
-    #score1,#score2,#score3,#sub{
+        #score1,#score2,#score3,#sub{
             display: none;
         }
+
+
     </style>
 </head>
 <body>
-
 
 <form id="myform">
 
@@ -26,15 +27,9 @@
                 <div class="aui-list-item-title">1.团队建设情况（满分：15分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a1"   oninput="if(value>15)value=15;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button value="-" onClick="this.form.score1_1.value--;if(this.form.score1_1.value<0){this.form.score1_1.value = 0}else if(this.form.score1_1.value>15){this.form.score1_1.value=15}"  style="display:inline-block;">
+                            <input type="number" name="score1_1" class="aui-input aui-text-center a1"  style="display:inline-block;width:30%"  oninput="if(value>15)value=15;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                            <input type=button value="+" onClick="this.form.score1_1.value++;if(this.form.score1_1.value<0){this.form.score1_1.value = 0}else if(this.form.score1_1.value>15){this.form.score1_1.value=15}"  style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -44,15 +39,14 @@
                 <div class="aui-list-item-title">2.支撑产业发展情况（满分：50分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a2"  oninput="if(value>50)value=50;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                      <input type=button value="-" onClick="this.form.score1_2.value--;if(this.form.score1_2.value<0){this.form.score1_2.value = 0}else if(this.form.score1_2.value>50){this.form.score1_2.value=50}"  style="display:inline-block;">
+
+                      <input type="number" name="score1_2" class="aui-input aui-text-center a2" style="display:inline-block;width:30%" oninput="if(value>50)value=50;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+
+                      <input type=button value="+" onClick="this.form.score1_2.value++;if(this.form.score1_2.value<0){this.form.score1_2.value = 0}else if(this.form.score1_2.value>50){this.form.score1_2.value=50}" style="display:inline-block;">
+
+
+
                     </div>
                 </div>
             </div>
@@ -62,15 +56,9 @@
                 <div class="aui-list-item-title">3.应急事件处置及参与重大活动情况（满分：10分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a3"  oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                      <input type=button value="-" onClick="this.form.score1_3.value--;if(this.form.score1_3.value<0){this.form.score1_3.value = 0}else if(this.form.score1_3.value>10){this.form.score1_3.value=10}"  style="display:inline-block;">
+                      <input type="number" name="score1_3" class="aui-input aui-text-center a3" style="display:inline-block;width:30%"  oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                      <input type=button value="+" onClick="this.form.score1_3.value++;if(this.form.score1_3.value<0){this.form.score1_3.value = 0}else if(this.form.score1_3.value>10){this.form.score1_3.value=10}"  style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -80,15 +68,9 @@
                 <div class="aui-list-item-title">4.经费使用情况（满分：10分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a4" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                      <input type=button value="-" onClick="this.form.score1_4.value--;if(this.form.score1_4.value<0){this.form.score1_4.value = 0}else if(this.form.score1_4.value>10){this.form.score1_4.value=10}"  style="display:inline-block;">
+                      <input type="number" name="score1_4" class="aui-input aui-text-center a4" style="display:inline-block;width:30%"  oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                      <input type=button value="+" onClick="this.form.score1_4.value++;if(this.form.score1_4.value<0){this.form.score1_4.value = 0}else if(this.form.score1_4.value>10){this.form.score1_4.value=10}"  style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -98,15 +80,9 @@
                 <div class="aui-list-item-title">5.宣传推动情况（满分：10分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a5"  oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                      <input type=button value="-" onClick="this.form.score1_5.value--;if(this.form.score1_5.value<0){this.form.score1_5.value = 0}else if(this.form.score1_5.value>10){this.form.score1_5.value=10}"  style="display:inline-block;">
+                      <input type="number" name="score1_5" class="aui-input aui-text-center a5" style="display:inline-block;width:30%"  oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                      <input type=button value="+" onClick="this.form.score1_5.value++;if(this.form.score1_5.value<0){this.form.score1_5.value = 0}else if(this.form.score1_5.value>10){this.form.score1_5.value=10}"  style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -116,15 +92,9 @@
                 <div class="aui-list-item-title">6.对接协作情况（满分：15分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a6"  oninput="if(value>15)value=15;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                      <input type=button value="-" onClick="this.form.score1_6.value--;if(this.form.score1_6.value<0){this.form.score1_6.value = 0}else if(this.form.score1_6.value>15){this.form.score1_6.value=15}"  style="display:inline-block;">
+                      <input type="number" name="score1_6" class="aui-input aui-text-center a6" style="display:inline-block;width:30%"  oninput="if(value>15)value=15;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                      <input type=button value="+" onClick="this.form.score1_6.value++;if(this.form.score1_6.value<0){this.form.score1_6.value = 0}else if(this.form.score1_6.value>15){this.form.score1_6.value=15}"  style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -138,15 +108,12 @@
                 <div class="aui-list-item-title">1.任务完成情况（满分：50分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a1"  oninput="if(value>50)value=50;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+
+                        <input type=button value="-" onClick="this.form.score2_1.value--;if(this.form.score2_1.value<0){this.form.score2_1.value = 0}else if(this.form.score2_1.value>50){this.form.score2_1.value=50}"  style="display:inline-block;">
+
+                        <input type="number" name="score2_1" class="aui-input aui-text-center a1" style="display:inline-block;width:30%" oninput="if(value>50)value=50;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+
+                        <input type=button value="+" onClick="this.form.score2_1.value++;if(this.form.score2_1.value<0){this.form.score2_1.value = 0}else if(this.form.score2_1.value>50){this.form.score2_1.value=50}" style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -156,15 +123,10 @@
                 <div class="aui-list-item-title">2.遵规守纪情况（满分：20分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a2"  oninput="if(value>20)value=20;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+
+                            <input type=button  value="-" onClick="this.form.score2_2.value--;if(this.form.score2_2.value<0){this.form.score2_2.value = 0}else if(this.form.score2_2.value>20){this.form.score2_2.value=20}" style="display:inline-block;">
+                            <input type="number" name="score2_2" class="aui-input aui-text-center a2" style="display:inline-block;width:30%"  oninput="if(value>20)value=20;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                            <input type=button  value="+" onClick="this.form.score2_2.value++;if(this.form.score2_2.value<0){this.form.score2_2.value = 0}else if(this.form.score2_2.value>20){this.form.score2_2.value=20}" style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -174,15 +136,9 @@
                 <div class="aui-list-item-title">3.经费使用情况（满分：10分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a3"  oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button  value="-" onClick="this.form.score2_3.value--;if(this.form.score2_3.value<0){this.form.score2_3.value = 0}else if(this.form.score2_3.value>10){this.form.score2_3.value=10}" style="display:inline-block;">
+                            <input type="number" name="score2_3" class="aui-input aui-text-center a3" style="display:inline-block;width:30%" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                            <input type=button  value="+" onClick="this.form.score2_3.value++;this.form.score2_3.value++;if(this.form.score2_3.value<0){this.form.score2_3.value = 0}else if(this.form.score2_3.value>10){this.form.score2_3.value=10}" style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -192,15 +148,9 @@
                 <div class="aui-list-item-title">4.宣传推动情况（满分：10分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a4"  oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button  value="-" onClick="this.form.score2_4.value--;if(this.form.score2_4.value<0){this.form.score2_4.value = 0}else if(this.form.score2_4.value>10){this.form.score2_4.value=10}" style="display:inline-block;">
+                            <input type="number" name="score2_4" class="aui-input aui-text-center a4" style="display:inline-block;width:30%" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                            <input type=button  value="+" onClick="this.form.score2_4.value++;this.form.score2_4.value++;if(this.form.score2_4.value<0){this.form.score2_4.value = 0}else if(this.form.score2_4.value>10){this.form.score2_4.value=10}" style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -210,15 +160,9 @@
                 <div class="aui-list-item-title">5.其他（满分：10分)</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a5"  oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button  value="-" onClick="this.form.score2_5.value--;if(this.form.score2_5.value<0){this.form.score2_5.value = 0}else if(this.form.score2_5.value>10){this.form.score2_5.value=10}" style="display:inline-block;">
+                            <input type="number" name="score2_5" class="aui-input aui-text-center a5" style="display:inline-block;width:30%" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                            <input type=button  value="+" onClick="this.form.score2_5.value++;this.form.score2_5.value++;if(this.form.score2_5.value<0){this.form.score2_5.value = 0}else if(this.form.score2_5.value>10){this.form.score2_5.value=10}" style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -233,15 +177,9 @@
                 <div class="aui-list-item-title">1.任务完成情况（满分：50分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a1"  oninput="if(value>50)value=50;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button value="-" onClick="this.form.score3_1.value--;if(this.form.score3_1.value<0){this.form.score3_1.value = 0}else if(this.form.score3_1.value>50){this.form.score3_1.value=50}"  style="display:inline-block;">
+                            <input type="number" name="score3_1" class="aui-input aui-text-center a1" style="display:inline-block;width:30%" oninput="if(value>50)value=50;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                            <input type=button value="+" onClick="this.form.score3_1.value++;if(this.form.score3_1.value<0){this.form.score3_1.value = 0}else if(this.form.score3_1.value>50){this.form.score3_1.value=50}"  style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -251,15 +189,9 @@
                 <div class="aui-list-item-title">2.遵规守纪情况（满分：20分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a2"  oninput="if(value>20)value=20;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button value="-" onClick="this.form.score3_2.value--;if(this.form.score3_2.value<0){this.form.score3_2.value = 0}else if(this.form.score3_2.value>20){this.form.score3_2.value=20}"  style="display:inline-block;">
+                            <input type="number" name="score3_2" class="aui-input aui-text-center a2" style="display:inline-block;width:30%" oninput="if(value>20)value=20;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                            <input type=button value="+" onClick="this.form.score3_2.value++;if(this.form.score3_2.value<0){this.form.score3_2.value = 0}else if(this.form.score3_2.value>20){this.form.score3_2.value=20}"  style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -269,15 +201,9 @@
                 <div class="aui-list-item-title">3.经费使用情况（满分：10分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a3"  oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button  value="-" onClick="this.form.score3_3.value--;if(this.form.score3_3.value<0){this.form.score3_3.value = 0}else if(this.form.score3_3.value>10){this.form.score3_3.value=10}" style="display:inline-block;">
+                            <input type="number" name="score3_3" class="aui-input aui-text-center a3" style="display:inline-block;width:30%" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                            <input type=button  value="+" onClick="this.form.score3_3.value++;if(this.form.score3_3.value<0){this.form.score3_3.value = 0}else if(this.form.score3_3.value>10){this.form.score3_3.value=10}" style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -287,15 +213,9 @@
                 <div class="aui-list-item-title">4.宣传推动情况（满分：10分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a4" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button  value="-" onClick="this.form.score3_4.value--;if(this.form.score3_4.value<0){this.form.score3_4.value = 0}else if(this.form.score3_4.value>10){this.form.score3_4.value=10}" style="display:inline-block;">
+                            <input type="number" name="score3_4" class="aui-input aui-text-center a4" style="display:inline-block;width:30%" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0" >
+                            <input type=button  value="+" onClick="this.form.score3_4.value++;if(this.form.score3_4.value<0){this.form.score3_4.value = 0}else if(this.form.score3_4.value>10){this.form.score3_4.value=10}" style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -305,15 +225,9 @@
                 <div class="aui-list-item-title">5.争取支持情况（满分：5分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a5" oninput="if(value>5)value=5;if(value.length>1)value=value.slice(0,1);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button  value="-" onClick="this.form.score3_5.value--;if(this.form.score3_5.value<0){this.form.score3_5.value = 0}else if(this.form.score3_5.value>5){this.form.score3_5.value=5}" style="display:inline-block;">
+                            <input type="number" name="score3_5" class="aui-input aui-text-center a5" style="display:inline-block;width:30%" oninput="if(value>5)value=5;if(value.length>1)value=value.slice(0,1);if(value<0)value=0" >
+                            <input type=button  value="+" onClick="this.form.score3_5.value++;if(this.form.score3_5.value<0){this.form.score3_5.value = 0}else if(this.form.score3_5.value>5){this.form.score3_5.value=5}" style="display:inline-block;">
                     </div>
                 </div>
             </div>
@@ -323,15 +237,9 @@
                 <div class="aui-list-item-title">6.其他（满分：5分）</div>
                 <div class="aui-list-item-right">
                     <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right">
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-minus"></i>
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <input type="number" class="aui-input aui-text-center a6" oninput="if(value>5)value=5;if(value.length>1)value=value.slice(0,1);if(value<0)value=0" >
-                        </div>
-                        <div class="aui-bar-btn-item">
-                            <i class="aui-iconfont aui-icon-plus"></i>
-                        </div>
+                            <input type=button  value="-" onClick="this.form.score3_6.value--;if(this.form.score3_6.value<0){this.form.score3_6.value = 0}else if(this.form.score3_6.value>5){this.form.score3_6.value=5}" style="display:inline-block;">
+                            <input type="number" name="score3_6" class="aui-input aui-text-center a6" style="display:inline-block;width:30%" oninput="if(value>5)value=5;if(value.length>1)value=value.slice(0,1);if(value<0)value=0" >
+                            <input type=button  value="+" onClick="this.form.score3_6.value++;if(this.form.score3_6.value<0){this.form.score3_6.value = 0}else if(this.form.score3_6.value>5){this.form.score3_6.value=5}" style="display:inline-block;">
                     </div>
                 </div>
             </div>
