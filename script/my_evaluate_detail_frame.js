@@ -202,13 +202,12 @@ $('#yes').on("click",function() {
         traditional: true,
         success: function(result) {
             alert("打分成功！");
-            api.openWin({
-                name: 'my_evaluate',
-                url: './my_evaluate_win.html',
-            });
         },
         error: function(result){
           alert("打分失败！")
         }
+    });
+    api.closeWin({
+
     });
 })
