@@ -2,32 +2,136 @@ var userRole =  $api.getStorage('userRole');
 apiready = function(){
   api.addEventListener({name: 'viewappear'}, function(ret, err){
     //根据role获取相应的打分详情
-
     var status = $api.getStorage('status');
+
     if(status == 1){
+      // 首席、副首席专家考评
       if (userRole == 1 || userRole == 2) {
-          $('#score1').css("display", "block");
-          $('#sub').css("display", "block");
-      } else if (userRole == 3) {
-        $('#score2').css("display", "block");
-        $('#sub').css("display", "block");
+        $("#title1").text("1．团队建设情况（15分）");
+        $("#title2").text("2．支撑产业发展情况（50分）");
+        $("#title3").text("3．应急事件处置及参与重大活动情况（10分）");
+        $("#title4").text("4．经费使用情况（10分）");
+        $("#title5").text("5．宣传推动情况（10分）");
+        $("#title6").text("6．对接协作情况（5分）");
+
+        $("input[name='a1']").attr('oninput', 'if(value>15)value=15;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+        $("input[name='a2']").attr('oninput', 'if(value>50)value=50;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+        $("input[name='a3']").attr('oninput', 'if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+        $("input[name='a4']").attr('oninput', 'if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+        $("input[name='a5']").attr('oninput', 'if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+        $("input[name='a6']").attr('oninput', 'if(value>5)value=5;if(value.length>1)value=value.slice(0,1);if(value<0)value=0');
+
+        $("input[name='a1']").prev().attr('onclick','this.form.a1.value--;if(this.form.a1.value<0){this.form.a1.value = 0}else if(this.form.a1.value>15){this.form.a1.value=15}')
+        $("input[name='a1']").next().attr('onclick','this.form.a1.value++;if(this.form.a1.value<0){this.form.a1.value = 0}else if(this.form.a1.value>15){this.form.a1.value=15}')
+
+        $("input[name='a2']").prev().attr('onclick','this.form.a2.value--;if(this.form.a2.value<0){this.form.a2.value = 0}else if(this.form.a2.value>50){this.form.a2.value=50}')
+        $("input[name='a2']").next().attr('onclick','this.form.a2.value++;if(this.form.a2.value<0){this.form.a2.value = 0}else if(this.form.a2.value>50){this.form.a2.value=50}')
+
+        $("input[name='a3']").prev().attr('onclick','this.form.a3.value--;if(this.form.a3.value<0){this.form.a3.value = 0}else if(this.form.a3.value>10){this.form.a3.value=10}')
+        $("input[name='a3']").next().attr('onclick','this.form.a3.value++;if(this.form.a3.value<0){this.form.a3.value = 0}else if(this.form.a3.value>10){this.form.a3.value=10}')
+
+        $("input[name='a4']").prev().attr('onclick','this.form.a4.value--;if(this.form.a4.value<0){this.form.a4.value = 0}else if(this.form.a4.value>10){this.form.a4.value=10}')
+        $("input[name='a4']").next().attr('onclick','this.form.a4.value++;if(this.form.a4.value<0){this.form.a4.value = 0}else if(this.form.a4.value>10){this.form.a4.value=10}')
+
+        $("input[name='a5']").prev().attr('onclick','this.form.a5.value--;if(this.form.a5.value<0){this.form.a5.value = 0}else if(this.form.a5.value>10){this.form.a5.value=10}')
+        $("input[name='a5']").next().attr('onclick','this.form.a5.value++;if(this.form.a5.value<0){this.form.a5.value = 0}else if(this.form.a5.value>10){this.form.a5.value=10}')
+
+        $("input[name='a6']").prev().attr('onclick','this.form.a6.value--;if(this.form.a6.value<0){this.form.a6.value = 0}else if(this.form.a6.value>5){this.form.a6.value=5}')
+        $("input[name='a6']").next().attr('onclick','this.form.a6.value++;if(this.form.a6.value<0){this.form.a6.value = 0}else if(this.form.a6.value>5){this.form.a6.value=5}')
+     } else if (userRole == 3) {
+        //岗位专家考评
+        $("#title1").text("1．任务完成情况（50分）");
+        $("#title2").text("2．遵规守纪情况（20分）");
+        $("#title3").text("3．经费使用情况（10分）");
+        $("#title4").text("4．宣传推动情况（10分）");
+        $("#title5").text("5．其他（10分）");
+        $("#last_li").css("display","none")
+        $("input[name='a1']").attr('oninput', 'if(value>50)value=50;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+        $("input[name='a2']").attr('oninput', 'if(value>20)value=20;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+        $("input[name='a3']").attr('oninput', 'if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+        $("input[name='a4']").attr('oninput', 'if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+        $("input[name='a5']").attr('oninput', 'if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+         //设置加减号
+        $("input[name='a1']").prev().attr('onclick','this.form.a1.value--;if(this.form.a1.value<0){this.form.a1.value = 0}else if(this.form.a1.value>50){this.form.a1.value=50}')
+        $("input[name='a1']").next().attr('onclick','this.form.a1.value++;if(this.form.a1.value<0){this.form.a1.value = 0}else if(this.form.a1.value>50){this.form.a1.value=50}')
+
+        $("input[name='a2']").prev().attr('onclick','this.form.a2.value--;if(this.form.a2.value<0){this.form.a2.value = 0}else if(this.form.a2.value>20){this.form.a2.value=20}')
+        $("input[name='a2']").next().attr('onclick','this.form.a2.value++;if(this.form.a2.value<0){this.form.a2.value = 0}else if(this.form.a2.value>20){this.form.a2.value=20}')
+
+        $("input[name='a3']").prev().attr('onclick','this.form.a3.value--;if(this.form.a3.value<0){this.form.a3.value = 0}else if(this.form.a3.value>10){this.form.a3.value=10}')
+        $("input[name='a3']").next().attr('onclick','this.form.a3.value++;if(this.form.a3.value<0){this.form.a3.value = 0}else if(this.form.a3.value>10){this.form.a3.value=10}')
+
+        $("input[name='a4']").prev().attr('onclick','this.form.a4.value--;if(this.form.a4.value<0){this.form.a4.value = 0}else if(this.form.a4.value>10){this.form.a4.value=10}')
+        $("input[name='a4']").next().attr('onclick','this.form.a4.value++;if(this.form.a4.value<0){this.form.a4.value = 0}else if(this.form.a4.value>10){this.form.a4.value=10}')
+
+        $("input[name='a5']").prev().attr('onclick','this.form.a5.value--;if(this.form.a5.value<0){this.form.a5.value = 0}else if(this.form.a5.value>10){this.form.a5.value=10}')
+        $("input[name='a5']").next().attr('onclick','this.form.a5.value++;if(this.form.a5.value<0){this.form.a5.value = 0}else if(this.form.a5.value>10){this.form.a5.value=10}')
+
       } else if (userRole == 4) {
-          $('#score3').css("display", "block");
-          $('#sub').css("display", "block");
+        //试验站站长考评
+         $("#title1").text("1．任务完成情况（50分）");
+         $("#title2").text("2．遵规守纪情况（20分）");
+         $("#title3").text("3．经费使用情况（10分）");
+         $("#title4").text("4．宣传推动情况（10分）");
+         $("#title5").text("5．争取支持情况（5分）");
+         $("#title6").text("6．其他（5分）");
+         $("input[name='a1']").attr('oninput', 'if(value>50)value=50;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+         $("input[name='a2']").attr('oninput', 'if(value>20)value=20;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+         $("input[name='a3']").attr('oninput', 'if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+         $("input[name='a4']").attr('oninput', 'if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0');
+         $("input[name='a5']").attr('oninput', 'if(value>5)value=5;if(value.length>1)value=value.slice(0,1);if(value<0)value=0');
+         $("input[name='a6']").attr('oninput', 'if(value>5)value=5;if(value.length>1)value=value.slice(0,1);if(value<0)value=0');
+
+         $("input[name='a1']").prev().attr('onclick','this.form.a1.value--;if(this.form.a1.value<0){this.form.a1.value = 0}else if(this.form.a1.value>50){this.form.a1.value=50}')
+         $("input[name='a1']").next().attr('onclick','this.form.a1.value++;if(this.form.a1.value<0){this.form.a1.value = 0}else if(this.form.a1.value>50){this.form.a1.value=50}')
+
+         $("input[name='a2']").prev().attr('onclick','this.form.a2.value--;if(this.form.a2.value<0){this.form.a2.value = 0}else if(this.form.a2.value>20){this.form.a2.value=20}')
+         $("input[name='a2']").next().attr('onclick','this.form.a2.value++;if(this.form.a2.value<0){this.form.a2.value = 0}else if(this.form.a2.value>20){this.form.a2.value=20}')
+
+         $("input[name='a3']").prev().attr('onclick','this.form.a3.value--;if(this.form.a3.value<0){this.form.a3.value = 0}else if(this.form.a3.value>10){this.form.a3.value=10}')
+         $("input[name='a3']").next().attr('onclick','this.form.a3.value++;if(this.form.a3.value<0){this.form.a3.value = 0}else if(this.form.a3.value>10){this.form.a3.value=10}')
+
+         $("input[name='a4']").prev().attr('onclick','this.form.a4.value--;if(this.form.a4.value<0){this.form.a4.value = 0}else if(this.form.a4.value>10){this.form.a4.value=10}')
+         $("input[name='a4']").next().attr('onclick','this.form.a4.value++;if(this.form.a4.value<0){this.form.a4.value = 0}else if(this.form.a4.value>10){this.form.a4.value=10}')
+
+         $("input[name='a5']").prev().attr('onclick','this.form.a5.value--;if(this.form.a5.value<0){this.form.a5.value = 0}else if(this.form.a5.value>5){this.form.a5.value=5}')
+         $("input[name='a5']").next().attr('onclick','this.form.a5.value++;if(this.form.a5.value<0){this.form.a5.value = 0}else if(this.form.a5.value>5){this.form.a5.value=5}')
+
+         $("input[name='a6']").prev().attr('onclick','this.form.a6.value--;if(this.form.a6.value<0){this.form.a6.value = 0}else if(this.form.a6.value>5){this.form.a6.value=5}')
+         $("input[name='a6']").next().attr('onclick','this.form.a6.value++;if(this.form.a6.value<0){this.form.a6.value = 0}else if(this.form.a6.value>5){this.form.a6.value=5}')
+
       }
     }else{
       if (userRole == 1 || userRole == 2) {
-          $('#score1').css("display", "block");
-          $('#score1 input').attr("disabled","disabled")
+        $("#title1").text("1．团队建设情况（15分）");
+        $("#title2").text("2．支撑产业发展情况（50分）");
+        $("#title3").text("3．应急事件处置及参与重大活动情况（10分）");
+        $("#title4").text("4．经费使用情况（10分）");
+        $("#title5").text("5．宣传推动情况（10分）");
+        $("#title6").text("6．对接协作情况（5分）");
+        $('#sub').css("display", "none");
+        $('input').attr("disabled","disabled")
       } else if (userRole == 3) {
-        $('#score2').css("display", "block");
-        $('#score2 input').attr("disabled","disabled")
+        $("#title1").text("1．任务完成情况（50分）");
+        $("#title2").text("2．遵规守纪情况（20分）");
+        $("#title3").text("3．经费使用情况（10分）");
+        $("#title4").text("4．宣传推动情况（10分）");
+        $("#title5").text("5．其他（10分）");
+        $("#last_li").css("display","none")
+        $('#sub').css("display", "none");
+        $('input').attr("disabled","disabled")
       } else if (userRole == 4) {
-          $('#score3').css("display", "block");
-          $('#score3 input').attr("disabled","disabled")
+        $("#title1").text("1．任务完成情况（50分）");
+        $("#title2").text("2．遵规守纪情况（20分）");
+        $("#title3").text("3．经费使用情况（10分）");
+        $("#title4").text("4．宣传推动情况（10分）");
+        $("#title5").text("5．争取支持情况（5分）");
+        $("#title6").text("6．其他（5分）");
+        $('#sub').css("display", "none");
+        $('input').attr("disabled","disabled")
       }
     }
-
+//
   //获取
   $.ajax({
     type: 'get',
@@ -59,25 +163,25 @@ $('#yes').on("click",function() {
     A5 = 0;
     A6 = 0;
     if (userRole == 1 || userRole == 2) {
-        A1=parseInt($('#score1 .a1').val());
-        A2=parseInt($('#score1 .a2').val());
-        A3=parseInt($('#score1 .a3').val());
-        A4=parseInt($('#score1 .a4').val());
-        A5=parseInt($('#score1 .a5').val());
-        A6=parseInt($('#score1 .a6').val());
+        A1=parseInt($('.a1').val());
+        A2=parseInt($('.a2').val());
+        A3=parseInt($('.a3').val());
+        A4=parseInt($('.a4').val());
+        A5=parseInt($('.a5').val());
+        A6=parseInt($('.a6').val());
     } else if (userRole == 3) {
-      A1=parseInt($('#score2 .a1').val());
-      A2=parseInt($('#score2 .a2').val());
-      A3=parseInt($('#score2 .a3').val());
-      A4=parseInt($('#score2 .a4').val());
-      A5=parseInt($('#score2 .a5').val());
+      A1=parseInt($('.a1').val());
+      A2=parseInt($('.a2').val());
+      A3=parseInt($('.a3').val());
+      A4=parseInt($('.a4').val());
+      A5=parseInt($('.a5').val());
     } else if (userRole == 4) {
-      A1=parseInt($('#score3 .a1').val());
-      A2=parseInt($('#score3 .a2').val());
-      A3=parseInt($('#score3 .a3').val());
-      A4=parseInt($('#score3 .a4').val());
-      A5=parseInt($('#score3 .a5').val());
-      A6=parseInt($('#score3 .a6').val());
+      A1=parseInt($('.a1').val());
+      A2=parseInt($('.a2').val());
+      A3=parseInt($('.a3').val());
+      A4=parseInt($('.a4').val());
+      A5=parseInt($('.a5').val());
+      A6=parseInt($('.a6').val());
     }
     urlParam = param + '/testscore/score';
     $.ajax({
