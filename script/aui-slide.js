@@ -1,14 +1,6 @@
-/**
- * aui-slide.js 轮播组件
- * @author 流浪男
- * http://www.auicss.com
- * @todo more things to abstract, e.g. Loading css etc.
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
+
 (function(window) {
 	"use strict";
-
 	var translateVal,
 		firstTouchX,
 		firstTouchY,
@@ -35,12 +27,12 @@
 		container:'',
 		width:'auto',
 		height:'auto',
-		speed: 300, //滑动速速
-		autoPlay: 0, //自动播放
+		speed: 600, //滑动速速
+		autoPlay: 2000, //自动播放
 		pageShow: true, //是否显示分页器
 		pageStyle: 'dot',
 		dotPosition: 'center',
-		friction:1, //阻力
+		friction:0, //阻力
 		loop:true,
 		currentPage:false,
 		PageCount:false
