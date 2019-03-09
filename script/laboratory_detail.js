@@ -11,7 +11,7 @@ apiready = function() {
         },
         dataType: 'json',
         success: function(result) {
-            api.hideProgress(); 
+            api.hideProgress();
             // console.log(JSON.stringify(result));
             var laboratorys = result.data;
             var Ele = '<h1>' + laboratorys.laboratory.labName + '</h1><div><h3>基本内容展示：</h3><ul><li><font>建设依托单位：</font></li><div style="display:block;padding-left:15px;">'+laboratorys.laboratory.company+'</div>';
