@@ -48,18 +48,19 @@ apiready = function() {
               crossDomain: true,
               url: param + "/dynamic/findFor",
               dataType: "json",
-              data:{"systemId":$api.getStorage('systemId')},
+              data:{"userId":$api.getStorage('userId')},
               type: "get",
               async: false,
               success: function (result) {
-                api.hideProgress(); 
+                api.hideProgress();
                 var dynamics = result.data.dynamics;
                 $.each(dynamics, function(index, dynamic) {
                     var liEle = '<li><a tapmode onclick="fnOpenDynamicDetail('+dynamic.id+')";><p class="wz-l">' + dynamic.title + '</p><span class="wz-r">' + dynamic.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
                 });
               },
-              error : function(){
+              error : function(e){
+                console.log(""+e);
                 alert("获取数据失败！")
               }
 
