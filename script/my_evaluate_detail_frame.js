@@ -176,8 +176,19 @@ apiready = function(){
         $('#sub').css("display", "none");
         $('input').attr("disabled","disabled")
       }
+
     }
 //
+    $("#sum_score").on("click",function(){
+      A1=parseInt($('.a1').val());
+      A2=parseInt($('.a2').val());
+      A3=parseInt($('.a3').val());
+      A4=parseInt($('.a4').val());
+      A5=parseInt($('.a5').val());
+      A6=parseInt($('.a6').val());
+      sum = A1+A2+A3+A4+A5+A6;
+      $(".sum_score").val(sum);
+    })
   //获取
   $.ajax({
     type: 'get',
