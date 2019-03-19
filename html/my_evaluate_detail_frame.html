@@ -22,7 +22,7 @@
                     <div class="aui-list-item-right">
                         <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:80%;float:right">
                             <input type=button value="-" style="display:inline-block;">
-                            <input type="number" name="a1" placeholder="0" class="aui-input aui-text-center a1" style="display:inline-block;width:30%">
+                            <input type="number" step=0.1 name="a1" placeholder="0" class="aui-input aui-text-center a1" style="border-radius:10px;display:inline-block;width:30%" onkeyup="var p1 = parseFloat(value).toFixed(1);value = p1>=0?(/\.$/.test(value)?value:p1.replace(/0$/,'').replace(/\.$/,'')):''">
                             <input type=button value="+" style="display:inline-block;">
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                     <div class="aui-list-item-right">
                         <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:80%;float:right">
                             <input type=button value="-" style="display:inline-block;">
-                            <input type="number" name="a2" placeholder="0" class="aui-input aui-text-center a2" style="display:inline-block;width:30%">
+                            <input type="number" step=0.1 name="a2" placeholder="0" class="aui-input aui-text-center a2" style="border-radius:10px;display:inline-block;width:30%" onkeyup="var p1 = parseFloat(value).toFixed(1);value = p1>=0?(/\.$/.test(value)?value:p1.replace(/0$/,'').replace(/\.$/,'')):''">
                             <input type=button value="+"  style="display:inline-block;">
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                     <div class="aui-list-item-right">
                         <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:80%;float:right">
                             <input type=button value="-" style="display:inline-block;">
-                            <input type="number" name="a3" placeholder="0" class="aui-input aui-text-center a3" style="display:inline-block;width:30%">
+                            <input type="number" step=0.1 name="a3" placeholder="0" class="aui-input aui-text-center a3" style="border-radius:10px;display:inline-block;width:30%" onkeyup="var p1 = parseFloat(value).toFixed(1);value = p1>=0?(/\.$/.test(value)?value:p1.replace(/0$/,'').replace(/\.$/,'')):''">
                             <input type=button value="+"  style="display:inline-block;">
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     <div class="aui-list-item-right">
                         <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:80%;float:right">
                             <input type=button value="-" style="display:inline-block;">
-                            <input type="number" name="a4" placeholder="0" class="aui-input aui-text-center a4" style="display:inline-block;width:30%" >
+                            <input type="number" step=0.1 name="a4" placeholder="0" class="aui-input aui-text-center a4" style="border-radius:10px;display:inline-block;width:30%" onkeyup="var p1 = parseFloat(value).toFixed(1);value = p1>=0?(/\.$/.test(value)?value:p1.replace(/0$/,'').replace(/\.$/,'')):''">
                             <input type=button value="+"  style="display:inline-block;">
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="aui-list-item-right">
                         <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:80%;float:right">
                             <input type=button value="-"  style="display:inline-block;">
-                            <input type="number" name="a5" placeholder="0" class="aui-input aui-text-center a5" style="display:inline-block;width:30%" >
+                            <input type="number" step=0.1 name="a5" placeholder="0" class="aui-input aui-text-center a5" style="border-radius:10px;display:inline-block;width:30%" onkeyup="var p1 = parseFloat(value).toFixed(1);value = p1>=0?(/\.$/.test(value)?value:p1.replace(/0$/,'').replace(/\.$/,'')):''">
                             <input type=button value="+"  style="display:inline-block;">
                         </div>
                     </div>
@@ -82,19 +82,31 @@
                     <div class="aui-list-item-right">
                         <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:80%;float:right">
                             <input type=button value="-" style="display:inline-block;">
-                            <input type="number" name="a6" placeholder="0" class="aui-input aui-text-center a6" style="display:inline-block;width:30%">
+                            <input type="number" step=0.1 name="a6"  placeholder="0" class="aui-input aui-text-center a6" style="border-radius:10px;display:inline-block;width:30%" onkeyup="var p1 = parseFloat(value).toFixed(1);value = p1>=0?(/\.$/.test(value)?value:p1.replace(/0$/,'').replace(/\.$/,'')):''">
+                            <input type=button value="+"  style="display:inline-block;">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item" >
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-title" id="title7">附加分</div>
+                    <div class="aui-list-item-right">
+                        <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:80%;float:right">
+                            <input type=button value="-" style="display:inline-block;">
+                            <input type="number" step=0.1 name="a7" placeholder="0" value=0 class="aui-input aui-text-center a7" style="border-radius:10px;display:inline-block;width:30%" onkeyup="var p1 = parseFloat(value).toFixed(1);value = p1>=0?(/\.$/.test(value)?value:p1.replace(/0$/,'').replace(/\.$/,'')):''">
                             <input type=button value="+"  style="display:inline-block;">
                         </div>
                     </div>
                 </div>
             </li>
 
-            <li class="aui-list-item" id="last_li">
+            <li class="aui-list-item">
                 <div class="aui-list-item-inner">
-                  <div class="aui-btn" id="sum_score"  style="background-color:#87b87f;color:#fff;">计算总分</div>
+                  <div id="sum_score"  >总分</div>
                     <div class="aui-list-item-right">
                         <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:80%;float:right" >
-                          <input type="number" name="sum_score" placeholder="0" class="aui-input aui-text-center sum_score" style="display:inline-block;width:30%;disabled:disabled">
+                          <input type="number" step=0.1 name="sum_score" placeholder="0" class="aui-input aui-text-center sum_score" style="display:inline-block;width:30%;disabled:disabled">
                         </div>
                     </div>
                 </div>
