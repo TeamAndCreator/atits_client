@@ -20,5 +20,5 @@ apiready = function() {
           alert("获取数据失败！")
         }
     });
-
+    $("img").parent().css("text-indent","0");
 }
