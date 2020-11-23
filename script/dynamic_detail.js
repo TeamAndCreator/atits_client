@@ -15,10 +15,10 @@
               var dynamic = result.data.dynamic;
               var Ele = '<h2>' + dynamic.title + '</h2><h5><span>来源:' + dynamic.system.systemName + '</span>&nbsp;&nbsp;<span>编辑人：' + dynamic.user.profile.name + '</span> &nbsp;&nbsp;<span>时间：' + dynamic.date + '</span></h5><hr/><div class="widget-main">' + dynamic.content + '</div>';
               $(Ele).appendTo("div");
+              $("img").parent().css("text-indent","0");
           },
           error : function(){
             alert("获取数据失败！")
           }
       });
-      $("img").parent().css("text-indent","0");
   }

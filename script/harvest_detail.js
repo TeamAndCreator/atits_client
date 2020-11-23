@@ -15,10 +15,10 @@ apiready = function() {
             var harvest = result.data.harvest;
             var Ele = '<h2>' + harvest.title + '</h2><h5><span>来源:' + harvest.system.systemName + '</span>&nbsp;&nbsp;<span>编辑人:'+harvest.user.profile.name+'</span> &nbsp;&nbsp;<span>时间:'+harvest.date+'</span></h5><hr/><div class="widget-main">'+harvest.content+'</div>';
             $(Ele).appendTo("div");
+            $("img").parent().css("text-indent","0");
         },
         error : function(){
           alert("获取数据失败！")
         }
     });
-    $("img").parent().css("text-indent","0");
 }

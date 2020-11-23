@@ -16,6 +16,7 @@ apiready = function() {
             var activity = result.data.activity;
             var Ele = '<h2>' + activity.title + '</h2><h5><span>来源:' + activity.system.systemName + '</span>&nbsp;&nbsp;<span>编辑人：'+activity.user.profile.name+'</span> &nbsp;&nbsp;<span>时间：'+activity.date+'</span></h5><hr/><div class="widget-main">'+activity.content+'</div>';
             $(Ele).appendTo("div");
+            $("img").parent().css("text-indent","0");
         },
         error : function(){
           alert("获取数据失败！")

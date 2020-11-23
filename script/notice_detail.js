@@ -16,10 +16,10 @@ apiready = function() {
             var notice = result.data.notice;
             var Ele = '<h2>' + notice.title + '</h2><h5><span>来源:' + notice.system.systemName + '</span>&nbsp;&nbsp;<span>编辑人:'+notice.user.profile.name+'</span> &nbsp;&nbsp;<span>时间:'+notice.date+'</span></h5><hr/><div class="widget-main">'+notice.content+'</div>';
             $(Ele).appendTo("div");
+            $("img").parent().css("text-indent","0");
         },
         error : function(){
           alert("获取数据失败！")
         }
     });
-    $("img").parent().css("text-indent","0");
 }
