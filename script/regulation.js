@@ -12,6 +12,10 @@ apiready = function() {
             success: function (result) {
                 api.hideProgress();
                 var regulations = result.data.others;
+                //按时间排序
+                regulations.sort(function(a,b){
+                  return new Date(b.date).getTime() - new Date(a.date).getTime();
+                })
                 $.each(regulations, function(index, regulation) {
                     var liEle = '<li><a tapmode onclick="fnOpenRegulationDetail('+regulation.id+')";><p class="wz-l">' + regulation.title + '</p><span class="wz-r">' + regulation.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
@@ -32,6 +36,10 @@ apiready = function() {
             success: function (result) {
               api.hideProgress();
               var regulations = result.data.others;
+              //按时间排序
+              regulations.sort(function(a,b){
+                return new Date(b.date).getTime() - new Date(a.date).getTime();
+              })
               $.each(regulations, function(index, regulation) {
                   var liEle = '<li><a tapmode onclick="fnOpenRegulationDetail('+regulation.id+')";>\
                   <p class="wz-l">' + regulation.title + '</p><span class="wz-r">' + regulation.date + '</span></a></li>';
@@ -54,6 +62,10 @@ apiready = function() {
             success: function (result) {
               api.hideProgress();
               var regulations = result.data.others;
+              //按时间排序
+              regulations.sort(function(a,b){
+                return new Date(b.date).getTime() - new Date(a.date).getTime();
+              })
               $.each(regulations, function(index, regulation) {
                   var liEle = '<li><a tapmode onclick="fnOpenRegulationDetail('+regulation.id+')";>\
                   <p class="wz-l">' + regulation.title + '</p><span class="wz-r">' + regulation.date + '</span></a></li>';

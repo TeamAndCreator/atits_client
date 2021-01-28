@@ -13,6 +13,10 @@ api.showProgress(); //显示加载进度框
             success: function (result) {
                 api.hideProgress(); //隐藏加载进度框
                 var activities = result.data.activities;
+                //按时间排序
+                activities.sort(function(a,b){
+                  return new Date(b.date).getTime() - new Date(a.date).getTime();
+                })
                 $.each(activities, function(index, activity) {
                     var liEle = '<li><a tapmode onclick="fnOpenActivityDetail('+activity.id+')";><p class="wz-l">' + activity.title + '</p><span class="wz-r">' + activity.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
@@ -34,6 +38,10 @@ api.showProgress(); //显示加载进度框
             success: function (result) {
               api.hideProgress(); //隐藏加载进度框
               var activities = result.data.activities;
+              //按时间排序
+              activities.sort(function(a,b){
+                return new Date(b.date).getTime() - new Date(a.date).getTime();
+              })
               $.each(activities, function(index, activity) {
                   var liEle = '<li><a tapmode onclick="fnOpenActivityDetail('+activity.id+')";><p class="wz-l">' + activity.title + '</p><span class="wz-r">' + activity.date + '</span></a></li>';
                   $(liEle).appendTo("ul");
@@ -55,6 +63,10 @@ api.showProgress(); //显示加载进度框
             success: function (result) {
               api.hideProgress(); //隐藏加载进度框
               var activities = result.data.activities;
+              //按时间排序
+              activities.sort(function(a,b){
+                return new Date(b.date).getTime() - new Date(a.date).getTime();
+              })
               $.each(activities, function(index, activity) {
                   var liEle = '<li><a tapmode onclick="fnOpenActivityDetail('+activity.id+')";><p class="wz-l">' + activity.title + '</p><span class="wz-r">' + activity.date + '</span></a></li>';
                   $(liEle).appendTo("ul");

@@ -12,6 +12,10 @@ apiready = function() {
             success: function (result) {
                 api.hideProgress();
                 var harvests = result.data.harvests;
+                //按时间排序
+                harvests.sort(function(a,b){
+                  return new Date(b.date).getTime() - new Date(a.date).getTime();
+                })
                 $.each(harvests, function(index, harvest) {
                     var liEle = '<li><a tapmode onclick="fnOpenHarvestDetail('+harvest.id+')";><p class="wz-l">' + harvest.title + '</p><span class="wz-r">' + harvest.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
@@ -33,6 +37,10 @@ apiready = function() {
             success: function (result) {
               api.hideProgress();
               var harvests = result.data.harvests;
+              //按时间排序
+              harvests.sort(function(a,b){
+                return new Date(b.date).getTime() - new Date(a.date).getTime();
+              })
               $.each(harvests, function(index, harvest) {
                   var liEle = '<li><a tapmode onclick="fnOpenHarvestDetail('+harvest.id+')";><p class="wz-l">' + harvest.title + '</p><span class="wz-r">' + harvest.date + '</span></a></li>';
                   $(liEle).appendTo("ul");
@@ -54,6 +62,10 @@ apiready = function() {
             success: function (result) {
               api.hideProgress();
               var harvests = result.data.harvests;
+              //按时间排序
+              harvests.sort(function(a,b){
+                return new Date(b.date).getTime() - new Date(a.date).getTime();
+              })
               $.each(harvests, function(index, harvest) {
                   var liEle = '<li><a tapmode onclick="fnOpenHarvestDetail('+harvest.id+')";><p class="wz-l">' + harvest.title + '</p><span class="wz-r">' + harvest.date + '</span></a></li>';
                   $(liEle).appendTo("ul");

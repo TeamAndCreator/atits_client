@@ -13,6 +13,10 @@ apiready = function() {
               success: function (result) {
                   api.hideProgress();
                   var notices = result.data.notices;
+                  //按时间排序
+                  notices.sort(function(a,b){
+                    return new Date(b.date).getTime() - new Date(a.date).getTime();
+                  })
                   $.each(notices, function(index, notice){
                       var liEle = '<li><a tapmode onclick="fnOpenNoticeDetail('+notice.id+')";><p class="wz-l">' + notice.title + '</p><span class="wz-r">' + notice.date + '</span></a></li>';
                       $(liEle).appendTo("ul");
@@ -35,6 +39,10 @@ apiready = function() {
               success: function (result) {
                 api.hideProgress();
                 var notices = result.data.notices;
+                //按时间排序
+                notices.sort(function(a,b){
+                  return new Date(b.date).getTime() - new Date(a.date).getTime();
+                })
                 $.each(notices, function(index, notice){
                     var liEle = '<li><a tapmode onclick="fnOpenNoticeDetail('+notice.id+')";><p class="wz-l">' + notice.title + '</p><span class="wz-r">' + notice.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
@@ -56,6 +64,10 @@ apiready = function() {
               success: function (result) {
                 api.hideProgress();
                 var notices = result.data.notices;
+                //按时间排序
+                notices.sort(function(a,b){
+                  return new Date(b.date).getTime() - new Date(a.date).getTime();
+                })
                 $.each(notices, function(index, notice) {
                   var liEle = '<li><a tapmode onclick="fnOpenNoticeDetail('+notice.id+')";><p class="wz-l">' + notice.title + '</p><span class="wz-r">' + notice.date + '</span></a></li>';
                   $(liEle).appendTo("ul");

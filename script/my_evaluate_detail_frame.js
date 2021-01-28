@@ -385,7 +385,7 @@ $('#yes').on("click",function() {
       A3=parseFloat($('.a3').val());
       A4=parseFloat($('.a4').val());
       A5=parseFloat($('.a5').val());
-    } else if (userRole == 4) {
+    } else if (userRole == 4 || userRole == 5) {
       A1=parseFloat($('.a1').val());
       A2=parseFloat($('.a2').val());
       A3=parseFloat($('.a3').val());

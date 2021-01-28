@@ -12,6 +12,10 @@ apiready = function() {
             success: function (result) {
                 api.hideProgress();
                 var reports = result.data.reports;
+                //按时间排序
+                reports.sort(function(a,b){
+                  return new Date(b.date).getTime() - new Date(a.date).getTime();
+                })
                 $.each(reports, function(index, report) {
                     var liEle = '<li><a tapmode onclick="fnOpenReportDetail('+report.id+')";><p class="wz-l">' + report.title + '</p><span class="wz-r">' + report.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
@@ -33,6 +37,10 @@ apiready = function() {
             success: function (result) {
               api.hideProgress();
               var reports = result.data.reports;
+              //按时间排序
+              reports.sort(function(a,b){
+                return new Date(b.date).getTime() - new Date(a.date).getTime();
+              })
               $.each(reports, function(index, report) {
                   var liEle = '<li><a tapmode onclick="fnOpenReportDetail('+report.id+')";><p class="wz-l">' + report.title + '</p><span class="wz-r">' + report.date + '</span></a></li>';
                   $(liEle).appendTo("ul");
@@ -54,6 +62,10 @@ apiready = function() {
             success: function (result) {
               api.hideProgress();
               var reports = result.data.reports;
+              //按时间排序
+              reports.sort(function(a,b){
+                return new Date(b.date).getTime() - new Date(a.date).getTime();
+              })
               $.each(reports, function(index, report) {
                   var liEle = '<li><a tapmode onclick="fnOpenReportDetail('+report.id+')";><p class="wz-l">' + report.title + '</p><span class="wz-r">' + report.date + '</span></a></li>';
                   $(liEle).appendTo("ul");

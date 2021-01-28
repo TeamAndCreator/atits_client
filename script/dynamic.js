@@ -12,6 +12,10 @@ apiready = function() {
               success: function (result) {
                   api.hideProgress();
                   var dynamics = result.data.dynamics;
+                  //按时间排序
+                  dynamics.sort(function(a,b){
+                    return new Date(b.date).getTime() - new Date(a.date).getTime();
+                  })
                   $.each(dynamics, function(index, dynamic) {
                       var liEle = '<li><a tapmode onclick="fnOpenDynamicDetail('+dynamic.id+')";><p class="wz-l">' + dynamic.title + '</p><span class="wz-r">' + dynamic.date + '</span></a></li>';
                       $(liEle).appendTo("ul");
@@ -33,6 +37,10 @@ apiready = function() {
               success: function (result) {
                 api.hideProgress();
                 var dynamics = result.data.dynamics;
+                //按时间排序
+                dynamics.sort(function(a,b){
+                  return new Date(b.date).getTime() - new Date(a.date).getTime();
+                })
                 $.each(dynamics, function(index, dynamic) {
                     var liEle = '<li><a tapmode onclick="fnOpenDynamicDetail('+dynamic.id+')";><p class="wz-l">' + dynamic.title + '</p><span class="wz-r">' + dynamic.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
@@ -54,6 +62,10 @@ apiready = function() {
               success: function (result) {
                 api.hideProgress();
                 var dynamics = result.data.dynamics;
+                //按时间排序
+                dynamics.sort(function(a,b){
+                  return new Date(b.date).getTime() - new Date(a.date).getTime();
+                })
                 $.each(dynamics, function(index, dynamic) {
                     var liEle = '<li><a tapmode onclick="fnOpenDynamicDetail('+dynamic.id+')";><p class="wz-l">' + dynamic.title + '</p><span class="wz-r">' + dynamic.date + '</span></a></li>';
                     $(liEle).appendTo("ul");
